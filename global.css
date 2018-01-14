@@ -1,6 +1,873 @@
 /**
-
-Site des FRAMMI Awards
-Version 1
-
+Site des FRAMMI Awards - V1
 **/
+
+body {
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto';
+        font-size: 16px;
+        overflow-x: hidden;
+        color: #303030;
+}
+
+h1 {
+        font-family: 'UniSans Heavy';
+        font-size: 18px;}
+h2 {
+        font-family: 'UniSans Thin';
+        font-size: 18px;}
+h3 {
+        font-family: 'UniSans Thin Italic';
+        font-size: 18px;}
+h1, h2, h3 {font-weight: normal;}
+.bold {font-weight: bold;}
+
+a:link {
+        color: inherit;
+        text-decoration: none;}
+        a:hover {text-decoration: underline;}
+        a:visited {text-decoration: none; color: inherit;}
+
+@font-face {
+        font-family: 'UniSans Heavy';
+        src: url('fonts/Uni Sans/Uni Sans Heavy.otf') format('truetype');
+}
+@font-face {
+        font-family: 'UniSans Heavy Italic';
+        src: url('fonts/Uni Sans/Uni Sans Heavy Italic.otf') format('truetype');
+}
+@font-face {
+        font-family: 'UniSans Thin';
+        src: url('fonts/Uni Sans/Uni Sans Thin.otf') format('truetype');
+}
+@font-face {
+        font-family: 'UniSans Thin Italic';
+        src: url('fonts/Uni Sans/Uni Sans Italic.otf') format('truetype');
+}
+@font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+}
+
+
+
+
+/** ////////////////////////////////////////////////////////////////////////////////////////////
+                                        INDEX
+//////////////////////////////////////////////////////////////////////////////////////////// **/
+
+#grid-index {
+        display: grid;
+        grid-template-columns: minmax(40px,1fr) minmax(240px,800px) minmax(40px, 1fr);
+        grid-row-gap: 40px;
+        transition: margin 1s;
+        position: relative;
+        z-index: 0;
+}
+
+
+/***************************************
+                   MENU
+***************************************/
+input {
+        position: fixed;
+        cursor: pointer;
+        margin: 0;
+        opacity: 0;
+        z-index: 4;
+}
+input.lien-tactile-menu {
+        width: 59px;
+        height: 59px;
+        top: 10px;
+        left: 10px;
+}
+input.lien-tactile-inscription {
+	top: 205px;
+        left: -100%;
+	width: 260px;
+	height: 34px;}
+        input.lien-tactile-inscription:hover ~ #menu .elements-menu li:nth-of-type(5),
+        input.lien-tactile-inscription:checked ~ #menu .elements-menu li:nth-of-type(5) {
+                color: #9A0000; transition: color 0.4s;}
+input.lien-neutre {
+        cursor: default;
+        width: 260px;
+        height: 100%;}
+        input.lien-neutre:checked {z-index: -1;}
+
+.fond-bouton {
+        position: fixed;
+        height: 50px;
+        width: 50px;
+        border: 2px solid #FFF;
+        top: 12px;
+        left: 12px;
+        z-index: 2;
+}
+.bouton {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 16px;
+        width: 30px;
+        top: 30px;
+        left: 24px;
+        right: 20px;
+        z-index: 3;
+        transition: top 0.5s;
+        transition-timing-function: ease;}
+        input.lien-tactile-menu:checked ~ .bouton {
+                top: 37px;
+                transition: top 0.5s;
+                transition-timing-function: ease;}
+        .ligne-menu {
+                width: 100%;
+                height: 2px;
+                background-color: #FFF;}
+                .ligne-menu:nth-of-type(1) {
+                        transform: rotate(0deg);
+                        transition: transform 0.5s;
+                        transition-timing-function: ease;}
+                        input.lien-tactile-menu:checked ~ .bouton>.ligne-menu:nth-of-type(1) {
+                                transform: rotate(45deg);
+                                transition: transform 0.5s;
+                                transition-timing-function: ease;}
+                .ligne-menu:nth-of-type(2) {
+                        width: 100%;
+                        transition: width 0.5s;
+                        transition-timing-function: ease;}
+                        input.lien-tactile-menu:checked ~ .bouton>.ligne-menu:nth-of-type(2) {
+                                width: 0;
+                                transition: width 0.5s;
+                                transition-timing-function: ease;}
+                .ligne-menu:nth-of-type(3) {
+                        position: initial;
+                        transform: rotate(0deg);
+                        transition: transform 0.5s, position 0.5s;
+                        transition-timing-function: ease;}
+                        input.lien-tactile-menu:checked ~ .bouton>.ligne-menu:nth-of-type(3) {
+                                position: absolute;
+                                transform: rotate(-45deg);
+                                transition: transform 0.5s, position 0.5s;
+                                transition-timing-function: ease;}
+
+input.lien-tactile-menu:checked ~ nav#menu,
+input.lien-tactile-menu:checked ~ input.lien-tactile-inscription {left: 0;}
+input.lien-tactile-menu:checked ~ #grid-index {margin: 0 -260px 0 260px;}
+
+nav#menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        width: 260px;
+        height: 100%;
+        background-color: #303030;
+        left: -260px;
+        z-index: 2;
+        transition: left 1s ease;}
+        .elements-menu {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                margin: 65px 35px 0 35px;
+                padding: 0;
+                font-family: 'UniSans Heavy';
+                text-align: right;
+                font-size: 25px;
+                line-height: 1.4;}
+                .elements-menu li {color: #FFF;}
+                .elements-menu li a {
+                        font-family: 'UniSans Thin';
+                        color: #FFF;
+                        text-decoration: none;}
+        .social {
+                display: flex;
+                margin: auto 35px 65px 76px;
+                justify-content: space-around;}
+                .social a {width: 30px;}
+
+input.formulaire {
+        position: unset;
+        opacity: 1;
+	background: none;
+	border: 1px solid #303030;
+	color: #303030;
+	width: 70%;
+        max-width: 250px;
+	line-height: 2;
+        margin-bottom: 20px;
+	font-size: 18px;
+        text-transform: uppercase;}
+        .formulaire:hover {color: white; background-color: #303030;}
+
+
+/***************************************
+                ZONE EXPEND
+***************************************/
+
+#zone-expend {
+        display: flex;
+        position: fixed;
+        width: 0;
+        height: 100%;
+        margin: 0;
+        background-color: #FFF;
+        overflow-y: scroll;
+        z-index: 1;
+        transition: margin-left 1s ease, width 0.7s ease;
+}
+
+input.lien-tactile-menu:checked ~ #zone-expend {
+        margin-left: 260px;
+        transition: margin-left 1s ease;
+}
+input.lien-tactile-inscription:checked ~ #zone-expend {
+        width: 100%;
+        transition: width 0.7s ease;}
+        input.lien-tactile-inscription:checked ~ #zone-expend #inscription {
+                width: auto;
+                transition: width 0.7s ease;}
+
+section#inscription * {
+        opacity: 0;
+        transform: scale(1.1);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        transition-delay: 0.6s;}
+        input.lien-tactile-inscription:checked ~ #zone-expend #inscription * {
+                opacity: 1;
+                transform: scale(1);
+                transition: opacity 0.2s ease 0.4s, transform 0.4s ease 0.2s;}
+
+section#inscription {
+        margin: 20px 30% auto 5%;
+        overflow: visible;}
+        #inscription > h1:first-child, .inscription-popup >  h1:first-child {font-size: 40px;}
+        #inscription h1, .inscription-popup h1 {font-size: 25px; margin-bottom: -10px;}
+        #inscription h2, .inscription-popup h2 {font-size: 20px; margin-bottom: -10px;}
+        #inscription p, .inscription-popup p {font-size: 19px;}
+
+
+/***************************************
+                 HEADER
+***************************************/
+
+header {
+        display: flex;
+        grid-column: 1/4;
+        grid-row: 1/2;
+        background-color: #303030;
+        color: #FFF;
+        height: 500px;
+        background-image: url("images/Capture2.JPG");
+        background-position: center;
+        background-size: cover;
+}
+
+#logo {
+	margin: auto;
+        width: 80%;
+        max-width: 500px;
+}
+
+
+/***************************************
+             DESCRIPTION
+***************************************/
+
+#description {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        color: #303030;
+        text-align: justify;
+}
+#description span {color: #9A0000;}
+
+
+/***************************************
+             EXPLICATIONS
+***************************************/
+
+#explications {
+        display: flex;
+        grid-column: 1/3;
+        grid-row: 3/4;
+        background-color: #9A0000;
+        color: #FFF;
+        height: 160px;
+}
+#explications > div {
+        display: flex;
+        margin: 30px 14% 30px auto;
+        position: relative;
+        width: 80%;
+        max-width: 550px;
+        justify-content: space-around;
+}
+
+a.idee, a.clap, a.fusee, a.tapis, a.trophee {
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        z-index: 1;
+}
+a.idee {left: 0;} a.clap {left: 20%;} a.fusee {left: 40%;} a.tapis {left: 60%;} a.trophee {left: 80%;}
+
+legend {
+        font-family: 'UniSans Thin';
+        color: #FFF;
+        margin: auto 0;}
+legend > span {
+        font-family: 'UniSans Heavy';
+        display: block;
+}
+
+#explications + div * {transition-timing-function: ease;}
+#explications + div img {max-width: 70px; margin: 0 auto; transition: width 1s;}
+
+img.idee {order: 1;}
+img.idee+legend {order: 2;}
+img.clap {order: 3;}
+img.clap+legend {order: 4;}
+img.fusee {order: 5;}
+img.fusee+legend {order: 7;}
+img.tapis {order: 8;}
+img.tapis+legend {order: 9;}
+img.trophee {order: 10;}
+img.trophee+legend {order:11;}
+
+img.idee,img.clap,img.fusee, img.trophee {width: 50px;}
+img.tapis {width: 70px;}
+img.idee+legend, img.clap+legend, img.fusee+legend, /**img.tapis+legend,**/ img.trophee+legend {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        transition: width 1s, height 1s;}
+
+/** Idée zoomée **/
+        a.idee:hover ~img.clap,
+        a.idee:hover ~img.fusee,
+        a.idee:hover ~img.tapis,
+        a.idee:hover ~img.trophee {
+                width: 50px;
+                transition: width 1s;}
+        a.idee:hover ~ img.clap+legend,
+        a.idee:hover ~img.fusee+legend,
+        a.idee:hover ~img.tapis+legend,
+        a.idee:hover ~img.trophee+legend {
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                transition: width 1s, height 1s;}
+        a.idee:hover ~ img.idee+legend {
+                width: auto;
+                height: auto;
+                margin: auto 40px auto 0;
+                transition: margin 1s, width 1s, height 1s;}
+        a.idee:hover ~ img.idee {
+                width: auto;
+                width: 70px;
+                margin: 0 10px 0 40px;
+                transition: margin 1s, width 1s;}
+/** Clap zoomé **/
+        a.clap:hover ~img.idee,
+        a.clap:hover ~img.fusee,
+        a.clap:hover ~img.tapis,
+        a.clap:hover ~img.trophee {
+                width: 50px;
+                transition: width 1s;}
+        a.clap:hover ~img.idee+legend,
+        a.clap:hover ~img.fusee+legend,
+        a.clap:hover ~img.tapis+legend,
+        a.clap:hover ~img.trophee+legend {
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                transition: width 1s, height 1s;}
+        a.clap:hover ~img.clap+legend {
+                width: auto;
+                height: auto;
+                margin: auto 40px auto 0;
+                transition: margin 1s, width 1s, height 1s;}
+        a.clap:hover ~ img.clap {
+                width: auto;
+                width: 70px;
+                margin: 0 10px 0 40px;
+                transition: margin 1s, width 1s;}
+/** Fusée zoomée **/
+        a.fusee:hover ~img.idee,
+        a.fusee:hover ~img.clap,
+        a.fusee:hover ~img.tapis,
+        a.fusee:hover ~img.trophee {
+                width: 50px;
+                transition: width 1s;}
+        a.fusee:hover ~img.idee+legend,
+        a.fusee:hover ~img.clap+legend,
+        a.fusee:hover ~img.tapis+legend,
+        a.fusee:hover ~img.trophee+legend {
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                transition: width 1s, height 1s;}
+        a.fusee:hover ~img.fusee+legend {
+                width: auto;
+                height: auto;
+                margin: auto 40px auto 0;
+                transition: margin 1s, width 1s, height 1s;}
+        a.fusee:hover ~ img.fusee {
+                width: auto;
+                width: 70px;
+                margin: 0 10px 0 40px;
+                transition: margin 1s, width 1s;}
+/** Tapis zoomé **/
+        a.tapis:hover ~img.idee,
+        a.tapis:hover ~img.clap,
+        a.tapis:hover ~img.fusee,
+        a.tapis:hover ~img.trophee {
+                width: 50px;
+                transition: width 1s;}
+        a.tapis:hover ~img.idee+legend,
+        a.tapis:hover ~img.clap+legend,
+        a.tapis:hover ~img.fusee+legend,
+        a.tapis:hover ~img.trophee+legend {
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                transition: width 1s, height 1s;}
+        a.tapis:hover ~img.tapis+legend {
+                width: auto;
+                height: auto;
+                margin: auto 40px auto 0;
+                transition: margin 1s, width 1s, height 1s;}
+        a.tapis:hover ~ img.tapis {
+                width: auto;
+                width: 70px;
+                margin: 0 10px 0 40px;
+                transition: margin 1s, width 1s;}
+/** Tropée zoomé **/
+        a.trophee:hover ~img.idee,
+        a.trophee:hover ~img.clap,
+        a.trophee:hover ~img.fusee,
+        a.trophee:hover ~img.tapis {
+                width: 50px;
+                transition: width 1s;}
+        a.trophee:hover ~img.idee+legend,
+        a.trophee:hover ~img.clap+legend,
+        a.trophee:hover ~img.fusee+legend,
+        a.trophee:hover ~img.tapis+legend {
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                transition: width 1s, height 1s;}
+        a.trophee:hover ~img.trophee+legend {
+                width: auto;
+                height: auto;
+                margin: auto 40px auto 0;
+                transition: margin 1s, width 1s, height 1s;}
+        a.trophee:hover ~ img.trophee{
+                width: auto;
+                width: 70px;
+                margin: 0 10px 0 40px;
+                transition: margin 1s, width 1s;}
+
+
+/***************************************
+               PARTICIPER
+***************************************/
+
+#participer {
+        grid-column: 2/3;
+        grid-row: 4/5;
+        color: #303030;
+        display: grid;
+        grid-template-columns: auto minmax(240px,300px) auto;
+        grid-template-rows: 40px;
+}
+
+.bouton-index {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        padding: 0 15px;
+        color: #9a0000;
+        background: transparent;
+        border: 1px solid #9a0000;
+        text-decoration: none;
+        line-height: 40px;
+        text-align: center;
+        justify-content: center;
+        font-family: 'UniSans Heavy';
+        font-size: 20px;
+        opacity: 1;
+        box-sizing: border-box;
+        transition: all 0.4s ease;}
+        input.bouton-accueil {
+                grid-column: 2/3;
+                grid-row: 1/2;
+                position: unset;
+                width: 100%;
+                height: 100%;
+                margin: auto;}
+                input.bouton-accueil:hover ~ .bouton-index {
+                        color: #FFF;
+                        background: #9a0000;}
+                input.bouton-accueil:active ~ .bouton-index {
+                        color: #9a0000;
+                        background: transparent;
+                        border: 1px solid #9a0000;}
+        input.bouton-accueil-close {
+                top: 7%;
+                width: 40px;
+                height: 40px;
+                margin: 10px auto auto 13px;}
+                .inscription-popup {
+                        position: fixed;
+                        top: 6%;
+                        width: 0;
+                        max-width: 800px;
+                        height: 0;
+                        padding: 0 20px 0 60px;
+                        background: #FFF;
+                        box-sizing: border-box;
+                        z-index: 2;
+                        overflow-y: scroll;}
+                        .traits-inscription-popup {
+                                position: absolute;
+                                left: 0;
+                                width: 40px;
+                                height: 40px;
+                                margin: 10px auto auto 10px;}
+                                .trait {
+                                        height: 3px;
+                                        width: 100%;
+                                        background: black;
+                                        position: absolute;
+                                        top: 50%;
+                                        transition: all 0.2s ease;}
+                                        .trait:first-child {transform: rotate(45deg);}
+                                        .trait:last-child {transform: rotate(-45deg);}
+                input.bouton-accueil:checked ~ .inscription-popup {
+                        width: 90%;
+                        height: 88%;
+                        border: 3px solid;
+                        transition-property: width, height, border;
+                        transition-duration: 0s, 0.7s, 0s;}
+                input.bouton-accueil-close:checked {z-index: -1;}
+                input.bouton-accueil-close:checked ~ .inscription-popup {
+                        width: 0;
+                        height: 0;
+                        border: 0px solid;
+                        transition-property: width, height, border;
+                        transition-duration: 1s, 0.2s, 0.2s;
+                        transform-origin: right;}
+                        input.bouton-accueil-close:checked ~ .inscription-popup .traits-inscription-popup .trait {
+                                transform: rotate(0deg);
+                                width: 0;
+                                margin-left: 20px;}
+
+
+/***************************************
+              EDITION 2017
+***************************************/
+
+#edition2017 {
+        grid-column: 2/4;
+        grid-row: 5/6;
+        background-color: #303030;
+        color: #FFF;
+}
+.edition-contenu {
+        display: flex;
+	flex-wrap: wrap;
+        max-width: 785px;
+	color: #FFF;
+	margin: 10px auto 30px 20px;
+        position: relative;
+}
+
+.edition-contenu video {
+        display: flex;
+        height: 100%;
+        margin: auto 10px;
+        min-width: 260px;
+        flex: 1;
+}
+
+.edition-contenu h1 {
+	text-align: center;
+	width: 100%;
+        margin-bottom: 30px;
+}
+.edition-contenu h1 span{font-family: 'UniSans Thin';}
+
+.cat {
+        margin: auto 10px;
+        display: flex;
+        flex-direction: column;
+        min-width: 290px;
+        flex: 1;
+}
+
+.cat img {
+	width: 20px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.cat p {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0 14px 6px;}
+        .cat p::before {
+                content: "🎬";
+                width: 32px;
+                height: 20px;
+                display: inline-flex;
+                vertical-align: unset;
+                font-size: 18px;}
+        .cat p a::after {content: " »";}
+        .cat p a::before {content: "« ";}
+.cat p:last-child {margin: 7px auto auto 20px;}
+        .cat p:last-child::before {display: none;}
+
+
+/***************************************
+            LOCALISATION
+***************************************/
+
+#localisation {
+        display: flex;
+        grid-column: 1/4;
+        grid-row: 6/7;
+        background-image: url("images/map-wide.png");
+        background-position: right;
+        background-size: cover;
+}
+.localisation-bande {
+        display: flex;
+        max-width: 1000px;
+        margin: 25px auto 25px 0;
+        padding: 0 0 0 25%;
+        background-color: #9A0000;
+}
+.localisation-contenu {
+        margin: 0 10% 10% auto;
+        color: #FFF;
+        text-align: center;
+}
+a.localisation-bouton {color: #FFF;}
+.localisation-bouton {
+        margin: auto auto 25px 0;
+        width: 150px;
+        padding: 0 15px;
+        background: #9a0000;
+        text-decoration: none;
+        line-height: 2;
+        text-align: center;
+        font-family: 'UniSans Thin';
+        font-size: 20px;
+        transition: margin 0.4s, width 0.4s, border 0.4s;
+}
+.localisation-bouton:hover {
+        margin: auto auto 25px 0;
+        width: 160px;
+        color: #9a0000;
+        background: transparent;
+        border: 1px solid #9a0000;
+        text-decoration: none;
+        transition: margin 0.4s, width 0.4s, background 0.4s, color 0.4s;
+}
+
+
+/***************************************
+              PARTENAIRES
+***************************************/
+
+#partenaires{
+        grid-column: 2/3;
+        grid-row: 7/8;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+}
+
+#partenaires h1 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;}
+#partenaires img {
+        height: 60px;
+        margin-bottom: 20px;}
+
+
+/***************************************
+                  FOOTER
+***************************************/
+
+footer#contact {
+        grid-column: 1/4;
+        grid-row: 8/9;
+        color: #FFF;
+        z-index: -1;
+        position: relative;}
+        #contact::before, footer#contact > div::before {
+                display: block;
+                position: absolute;
+                top: 0;
+                content: "";
+                width: 100%;
+                height: 100%;}
+        #contact::before {
+                background-color: #303030;}
+
+footer#contact > div {
+        display: flex;
+        flex-direction: column;}
+        footer#contact > div::before {
+                background-image: url("images/pied-page.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                opacity: 0.4;
+                z-index: 0;}
+        .ctc {
+                width: 80%;
+                max-width: 550px;
+                margin: 20px auto 15px auto;
+                padding: 0 20px;
+        	color: white;
+        	text-align: center;
+        	border: 1px solid white;
+                z-index: 1;}
+                a.mail {
+                	color: white;
+                	text-decoration: none;}
+                        a.mail:hover {text-decoration: underline;}
+        p#droits {
+                max-width: 600px;
+                margin: 0 auto;
+        	text-align: center;
+        	color: white;
+                z-index: 1;}
+
+
+/***************************************
+                MENTIONS
+***************************************/
+
+body#mentions{border: 0;}
+        #mentions .header {
+        	background-color: #990000;
+        	color: white;
+        	margin: 0;
+        	text-align: left;}
+                #mentions .retour {
+                        padding: 0 10px;
+                        line-height: 3;}
+                        #mentions .retour::before {
+                                content: "↩ ";}
+        #mentions .corps{
+        	display: block;
+                max-width: 800px;
+        	width: 80%;
+        	margin: 50px auto;
+        }
+
+#mentions h1, #mentions h2, #mentions p {margin-bottom: 10px;}
+        #mentions h1.grosh1 {
+                font-size: 40px;
+                text-align: center;}
+        #mentions h2{
+        	font-size: 20px;}
+        #mentions p {margin-top: 0;}
+                #mentions h2+p {margin-top: 0;}
+
+
+
+/** ////////////////////////////////////////////////////////////////////////////////////////////
+                                   RESPONSIVE
+//////////////////////////////////////////////////////////////////////////////////////////// **/
+
+@media (max-width: 720px) {
+        input.lien-tactile-inscription:checked ~ nav#menu {left: -260px;}
+        input.lien-tactile-inscription:checked ~ .fond-bouton {border-color: #303030;}
+        input.lien-tactile-inscription:checked ~ .bouton .ligne-menu {background-color: #303030;}
+        input.lien-tactile-inscription:checked  ~ #zone-expend {margin-left: 0; transition: margin-left 0.7s ease 0.4s;}
+        input.lien-tactile-inscription:checked ~ #zone-expend #inscription {margin: 20px 5% auto 76px;}
+        input.lien-neutre {width: 80px; height: 80px;}
+        .inscription-popup {padding: 0 60px 0 20px;}
+                input.bouton-accueil:checked ~ .inscription-popup {
+                        top: 5%;
+                        left: 5%;
+                        width: 90%;
+                        height: 90%;}
+                        input.bouton-accueil-close {
+                                top: 5%;
+                                right: 5%;
+                                margin: 13px 13px auto auto;}
+                                .traits-inscription-popup {
+                                        position: fixed;
+                                        top: 5%;
+                                        right: 5%;
+                                        left: auto;
+                                        margin: 10px 10px auto auto;}
+        .edition-contenu {
+                flex-direction: column;
+                margin: 10px auto 30px auto;
+                width: 80%;}
+                .edition-contenu video {margin: 0 auto 30px 0;}
+                .cat {
+                        margin: auto;
+                        display: grid;
+                        grid-template-columns: 50% 50%;
+                        grid-gap: 30px;}
+                        .cat p {margin: 0;}
+                        .cat p:last-child {margin: auto; grid-column: 1/3;}
+                        .cat p:last-child::before {
+                                content: "⚋⚋⚋⚋⚋⚋⚋✂⚋⚋⚋⚋⚋⚋⚋";
+                                display: flex;
+                                margin: 5px auto;
+                                width: auto;}
+                                .cat a {
+                                        display: block;
+                                        margin-left: 26px;}
+                        .cat .cat1  span::before {content:"Prix de la meilleure ";}
+                        .cat .cat2  span::before {content:"Prix du meilleur ";}
+
+@media (max-width: 640px) {
+        #explications {grid-column: 1/4; height: auto;}
+                #explications > div {
+                        display: grid;
+                        width: auto;
+                        margin: 30px auto;
+                        grid-template-columns: auto auto;
+                        grid-gap: 20px;}
+                #explications > div a {display: none;}
+                img.idee,img.clap,img.fusee, img.tapis, img.trophee {width: 70px;}
+                img.idee+legend, img.clap+legend, img.fusee+legend, img.tapis+legend, img.trophee+legend {
+                        width: auto;
+                        height: auto;}
+        #edition2017 {grid-column: 1/4;}
+                .cat .cat1  span::before {display: none;}
+                .cat .cat2  span::before {display: none;}
+        #localisation {flex-direction: column;}
+                .localisation-bouton, .localisation-bouton:hover {margin :auto 25px 25px auto;}
+}
+
+@media (max-width: 480px) {
+        .cat {
+                display: flex;
+                flex-direction: column;}
+                .cat p {margin-bottom: 20px;}
+                .cat .cat1  span::before {display: inherit; }
+                .cat .cat2  span::before {display: inherit;}
+        .localisation-bande {margin: 25px 0; padding: 0;}
+                .localisation-contenu {margin: 0 auto;}
+                .localisation-bouton, .localisation-bouton:hover {margin :auto auto 25px auto;}
+}
