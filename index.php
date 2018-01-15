@@ -126,11 +126,11 @@
 
                 <section id="partenaires">
                         <h1>Nos partenaires</h1>
-			<img src="images/partenaires/logoMMI.png" width="auto"/>
-			<img src="images/partenaires/logoUSMB.png" width="auto"/>
-			<img src="images/partenaires/logoToulontoutcourt.png" width="auto"/>
-			<img src="images/partenaires/votrelogo.jpg" width="auto"/>
-			<img src="images/partenaires/votrelogo.jpg" width="auto"/>
+			<a href="http://mmi.univ-savoie.fr/site/" target="_blank"><img src="images/partenaires/logoMMI.png" width="auto"/></a>
+			<a href="https://www.univ-smb.fr/" target="_blank"><img src="images/partenaires/logoUSMB.png" width="auto"/></a>
+			<a href="http://www.toulontoutcourt.com/" target="_blank"><img src="images/partenaires/logoToulontoutcourt.png" width="auto"/></a>
+			<a href="" target="_blank"><img src="images/partenaires/votrelogo.jpg" width="auto"/></a>
+			<a href="" target="_blank"><img src="images/partenaires/votrelogo.jpg" width="auto"/></a>
 		</section>
 
                 <?php include("include/inc_pied.php") ?>
