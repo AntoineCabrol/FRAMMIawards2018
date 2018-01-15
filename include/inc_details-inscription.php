@@ -19,17 +19,16 @@
 <h2>Les courts métrages devront de ce fait répondre aux critères suivants :</h2>
 <p>
         - Ils ne devront pas dépasser les 5 minutes, générique compris.<br />
-        - Ils devront être remis au format .mp4 ou .mov avec le codec H264, en full HD si possible (entre 15 et 30 mb/s).<br />
+        - Ils devront être remis au format .mp4 ou .mov avec le codec H264, en full HD si possible, export VBR de passages (entre 15 et 30 mb/s).<br />
         - La musique devra être libre de droit ou réalisée par vos soins.<br />
         - Plusieurs films peuvent être envoyés par un même réalisateur.
 </p>
 <h1>Les pré-selections :</h1>
 <p>
-        Un mail sera envoyé pour vous informer de votre sélection ainsi que de votre
-        participation à l’événement. Une video de remerciment sera alors demandé aux selectionnés <br />
-        En cas de non présence lors de l’événement, une vidéo de remerciement devra
-        nous être envoyée en même temps que le court métrage. En cas contraire votre
-        court métrage ne pourra être accepté.
+        En cas de pré-sélection de votre film par notre jury, un mail vous sera envoyé. S'il est impossible pour vous de venir à la cérémonie le 5 Mars, une video de remerciement devra nous être envoyée afin de la diffuser lors de la soirée.
+</p>
+<p>
+        En cliquant sur participer, vous acceptez les conditions de participation et vous allez être redirigé vers la page de dépôt.
 </p>
 <form method="post" action="../pages/inscription.php">
         <input type="submit" value="formulaire" class="formulaire"/>
