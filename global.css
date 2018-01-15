@@ -93,6 +93,7 @@ input.lien-tactile-inscription {
         input.lien-tactile-inscription:hover ~ #menu .elements-menu li:nth-of-type(5),
         input.lien-tactile-inscription:checked ~ #menu .elements-menu li:nth-of-type(5) {
                 color: #9A0000; transition: color 0.4s;}
+        input.lien-tactile-inscription:checked ~ #zone-expend {overflow-y: scroll;}
 input.lien-neutre {
         cursor: default;
         width: 260px;
@@ -218,7 +219,6 @@ input.formulaire {
         height: 100%;
         margin: 0;
         background-color: #FFF;
-        overflow-y: scroll;
         z-index: 1;
         transition: margin-left 1s ease, width 0.7s ease;
 }
@@ -564,6 +564,7 @@ img.idee+legend, img.clap+legend, img.fusee+legend, /**img.tapis+legend,**/ img.
                 input.bouton-accueil-close:checked ~ .inscription-popup {
                         width: 0;
                         height: 0;
+                        overflow: hidden;
                         border: 0px solid;
                         transition-property: width, height, border;
                         transition-duration: 1s, 0.2s, 0.2s;
