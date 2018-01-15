@@ -93,7 +93,7 @@
 
                 <section id="edition2017">  <!-- EDITION 2017 -->
                         <div class="edition-contenu">
-        			<h1>RETOSPECTIVE <span>DE L'EDITION 2017</span></h1>
+        			<h1>RETROSPECTIVE <span>DE L'EDITION 2017</span></h1>
                                 <video src="images/Aftermovie - FRAMMI AWARDS 2017 [720p].mp4" controls poster="images/miniature.png" width="100%"></video>
         			<div class="cat">
         				<p class="cat1"><span>Bande-son :</span>
