@@ -1,14 +1,13 @@
 <!doctype html> <!--veut dire que l'on est en html 5-->
 <html lang="fr">
 	<head>
-		<meta charset="utf-8">
-                <meta name="viewport" content="width=device-width, user-scalable=no">
+		<?php include("../include/inc_meta.php") ?>
                 <?php include("../include/inc_analytics.php") ?>
-		<link rel="stylesheet" href="..\global.css" />
+		<link rel="stylesheet" href="../global.css" />
 		<title>FRAMMI - Mentions légales</title>
 	</head>
 
-	<body id="mentions">
+	<body id="pages">
 
 		<div class="header">
 			<a href="../index.php"><p class="retour">Retour au site </p></a>

@@ -1,4 +1,4 @@
-<h1>Règlement</h1>
+<h1 class="grosh1">Règlement</h1>
 <p>
         Afin de placer tous les participants ainsi que tous les courts métrages au même
         pied d’égalité, le règlement ci-dessous a été mis en place et devra être respecté

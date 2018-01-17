@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, user-scalable=no">
+	<?php include("include/inc_meta.php") ?>
         <?php include("include/inc_analytics.php") ?>
         <link rel="stylesheet" href="global.css" />
-        <title>FRAMMI Awards</title>
+        <title>Festival audiovisuel étudiant - FRAMMI Awards</title>
   </head>
 
   <body>
         <input type="checkbox" class="lien-tactile-menu"/>
         <input type="radio" name="option-menu" class="lien-tactile-inscription" onClick="location.href='#'"/>
-        <input type="radio" name="option-menu" class="lien-neutre" />
+        <input type="radio" name="option-menu" class="lien-neutre" checked/>
         <div class="bouton">
                 <div class="ligne-menu"></div>
                 <div class="ligne-menu"></div>
@@ -28,9 +27,9 @@
                         <li>Inscription</li>
                 </ul>
                 <div class="social">
-                        <a href="https://goo.gl/36aCRL" target="_blank"><img src="images/icones/facebook-white.svg" width="100%"/></a>
-                        <a href="https://goo.gl/Yz5tVD" target="_blank"><img src="images/icones/instagram-white.svg" width="100%"/></a>
-                        <a href="https://goo.gl/hJQdtk" target="_blank"><img src="images/icones/youtube-white.svg" width="100%"/></a>
+                        <a href="https://www.facebook.com/frammiawards/" target="_blank"><img src="images/icones/facebook-white.svg" width="100%"/></a>
+                        <a href="https://www.instagram.com/frammi_awards/" target="_blank"><img src="images/icones/instagram-white.svg" width="100%"/></a>
+                        <a href="https://www.youtube.com/channel/UCrFkdKO0A1VvjbN36g0fUrg" target="_blank"><img src="images/icones/youtube-white.svg" width="100%"/></a>
                 </div>
         </nav>
 
@@ -43,6 +42,9 @@
         <section id="grid-index">
                 <header> <!-- ENTETE -->
                         <img src="images/logo_blanc.png" id="logo" alt="logo">
+                        <video autoplay loop poster="videos/poster1.png" id="bgvideo">
+                                <source src="videos/bgvideo.mp4" type="video/mp4">
+                        </video>
                 </header>
 
                 <section id="description"> <!-- DESCRIPTION -->
@@ -94,7 +96,7 @@
                 <section id="edition2017">  <!-- EDITION 2017 -->
                         <div class="edition-contenu">
         			<h1>RETROSPECTIVE <span>DE L'EDITION 2017</span></h1>
-                                <video src="images/Aftermovie - FRAMMI AWARDS 2017 [720p].mp4" controls poster="images/miniature.png" width="100%"></video>
+                                <video src="videos/FRAMMI2017.mp4" controls poster="images/miniature.png" width="100%"></video>
         			<div class="cat">
         				<p class="cat1"><span>Bande-son :</span>
                                                 <a href="https://goo.gl/BM7Fnz" target="_blank">Massacre au GEC</a></p>
@@ -129,8 +131,8 @@
 			<a href="http://mmi.univ-savoie.fr/site/" target="_blank"><img src="images/partenaires/logoMMI.png" width="auto"/></a>
 			<a href="https://www.univ-smb.fr/" target="_blank"><img src="images/partenaires/logoUSMB.png" width="auto"/></a>
 			<a href="http://www.toulontoutcourt.com/" target="_blank"><img src="images/partenaires/logoToulontoutcourt.png" width="auto"/></a>
-			<a href="" target="_blank"><img src="images/partenaires/votrelogo.jpg" width="auto"/></a>
-			<a href="" target="_blank"><img src="images/partenaires/votrelogo.jpg" width="auto"/></a>
+			<!--a href="" target="_blank"><img src="images/partenaires/votrelogo.jpg" width="auto"/></a>
+			<a href="" target="_blank"><img src="images/partenaires/votrelogo.jpg" width="auto"/></a-->
 		</section>
 
                 <?php include("include/inc_pied.php") ?>

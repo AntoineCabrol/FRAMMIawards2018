@@ -12,13 +12,13 @@ body {
 }
 
 h1 {
-        font-family: 'UniSans Heavy';
+        font-family: 'USHeavy';
         font-size: 18px;}
 h2 {
-        font-family: 'UniSans Thin';
+        font-family: 'USThin';
         font-size: 18px;}
 h3 {
-        font-family: 'UniSans Thin Italic';
+        font-family: 'USThinItalic';
         font-size: 18px;}
 h1, h2, h3 {font-weight: normal;}
 .bold {font-weight: bold;}
@@ -30,20 +30,20 @@ a:link {
         a:visited {text-decoration: none; color: inherit;}
 
 @font-face {
-        font-family: 'UniSans Heavy';
-        src: url('fonts/Uni Sans/Uni Sans Heavy.otf') format('truetype');
+        font-family: 'USHeavy';
+        src: url('fonts/UniSans/UniSansHeavy.woff') format('woff');
 }
 @font-face {
-        font-family: 'UniSans Heavy Italic';
-        src: url('fonts/Uni Sans/Uni Sans Heavy Italic.otf') format('truetype');
+        font-family: 'USHeavyItalic';
+        src: url('fonts/UniSans/UniSansHeavyItalic.woff') format('woff');
 }
 @font-face {
-        font-family: 'UniSans Thin';
-        src: url('fonts/Uni Sans/Uni Sans Thin.otf') format('truetype');
+        font-family: 'USThin';
+        src: url('fonts/UniSans/UniSansThin.woff') format('woff');
 }
 @font-face {
-        font-family: 'UniSans Thin Italic';
-        src: url('fonts/Uni Sans/Uni Sans Italic.otf') format('truetype');
+        font-family: 'USThinItalic';
+        src: url('fonts/UniSans/UniSansItalic.woff') format('woff');
 }
 @font-face {
         font-family: 'Roboto';
@@ -178,13 +178,13 @@ nav#menu {
                 list-style: none;
                 margin: 65px 35px 0 35px;
                 padding: 0;
-                font-family: 'UniSans Heavy';
+                font-family: 'USHeavy';
                 text-align: right;
                 font-size: 25px;
                 line-height: 1.4;}
                 .elements-menu li {color: #FFF;}
                 .elements-menu li a {
-                        font-family: 'UniSans Thin';
+                        font-family: 'USThin';
                         color: #FFF;
                         text-decoration: none;}
         .social {
@@ -209,7 +209,7 @@ input.formulaire {
 
 
 /***************************************
-                ZONE EXPEND
+              ZONE EXPEND
 ***************************************/
 
 #zone-expend {
@@ -218,6 +218,7 @@ input.formulaire {
         width: 0;
         height: 100%;
         margin: 0;
+        overflow: hidden;
         background-color: #FFF;
         z-index: 1;
         transition: margin-left 1s ease, width 0.7s ease;
@@ -267,12 +268,32 @@ header {
         background-image: url("images/Capture2.JPG");
         background-position: center;
         background-size: cover;
+        position: relative;
+        overflow: hidden;
 }
+
+#bgvideo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;}
+        @media (min-aspect-ratio: 16/9) {#bgvideo {width: 100%; height: 300%; top: -100%;}}
+        @media (max-aspect-ratio: 16/9) {#bgvideo {width: 300%; height: 100%; left: -100%;}}
+        /**@supports (object-fit: cover) {
+                #video-fond > video {
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+                }
+        }**/
 
 #logo {
 	margin: auto;
         width: 80%;
         max-width: 500px;
+        z-index: 1;
 }
 
 
@@ -319,11 +340,11 @@ a.idee, a.clap, a.fusee, a.tapis, a.trophee {
 a.idee {left: 0;} a.clap {left: 20%;} a.fusee {left: 40%;} a.tapis {left: 60%;} a.trophee {left: 80%;}
 
 legend {
-        font-family: 'UniSans Thin';
+        font-family: 'USThin';
         color: #FFF;
         margin: auto 0;}
 legend > span {
-        font-family: 'UniSans Heavy';
+        font-family: 'USHeavy';
         display: block;
 }
 
@@ -504,7 +525,7 @@ img.idee+legend, img.clap+legend, img.fusee+legend, /**img.tapis+legend,**/ img.
         line-height: 40px;
         text-align: center;
         justify-content: center;
-        font-family: 'UniSans Heavy';
+        font-family: 'USHeavy';
         font-size: 20px;
         opacity: 1;
         box-sizing: border-box;
@@ -548,7 +569,7 @@ img.idee+legend, img.clap+legend, img.fusee+legend, /**img.tapis+legend,**/ img.
                                 .trait {
                                         height: 3px;
                                         width: 100%;
-                                        background: black;
+                                        background: #303030;
                                         position: absolute;
                                         top: 50%;
                                         transition: all 0.2s ease;}
@@ -607,7 +628,7 @@ img.idee+legend, img.clap+legend, img.fusee+legend, /**img.tapis+legend,**/ img.
 	width: 100%;
         margin-bottom: 30px;
 }
-.edition-contenu h1 span{font-family: 'UniSans Thin';}
+.edition-contenu h1 span{font-family: 'USThin';}
 
 .cat {
         margin: auto 10px;
@@ -672,7 +693,7 @@ a.localisation-bouton {color: #FFF;}
         text-decoration: none;
         line-height: 2;
         text-align: center;
-        font-family: 'UniSans Thin';
+        font-family: 'USThin';
         font-size: 20px;
         transition: margin 0.4s, width 0.4s, border 0.4s;
 }
@@ -752,42 +773,42 @@ footer#contact > div {
                         a.mail:hover {text-decoration: underline;}
         p#droits {
                 max-width: 600px;
-                margin: 0 auto;
+                margin: 0 auto 10px;
         	text-align: center;
         	color: white;
                 z-index: 1;}
 
 
 /***************************************
-                MENTIONS
+                   PAGES
 ***************************************/
 
-body#mentions{border: 0;}
-        #mentions .header {
+body#pages{border: 0;}
+        #pages .header {
         	background-color: #990000;
         	color: white;
         	margin: 0;
         	text-align: left;}
-                #mentions .retour {
+                #pages .retour {
                         padding: 0 10px;
                         line-height: 3;}
-                        #mentions .retour::before {
+                        #pages .retour::before {
                                 content: "↩ ";}
-        #mentions .corps{
+        #pages .corps{
         	display: block;
                 max-width: 800px;
         	width: 80%;
         	margin: 50px auto;
         }
 
-#mentions h1, #mentions h2, #mentions p {margin-bottom: 10px;}
-        #mentions h1.grosh1 {
+#pages h1, #pages h2, #pages p {margin-bottom: 10px;}
+        #pages h1.grosh1 {
                 font-size: 40px;
                 text-align: center;}
-        #mentions h2{
+        #pages h2{
         	font-size: 20px;}
-        #mentions p {margin-top: 0;}
-                #mentions h2+p {margin-top: 0;}
+        #pages p {margin-top: 0;}
+                #pages h2+p {margin-top: 0;}
 
 
 
