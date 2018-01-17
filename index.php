@@ -42,7 +42,7 @@
         <section id="grid-index">
                 <header> <!-- ENTETE -->
                         <img src="images/logo_blanc.png" id="logo" alt="logo">
-                        <video autoplay loop poster="videos/poster1.png" id="bgvideo">
+                        <video poster="videos/poster1.png" id="bgvideo" autoplay loop muted>
                                 <source src="videos/bgvideo.mp4" type="video/mp4">
                         </video>
                 </header>
