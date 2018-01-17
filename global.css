@@ -60,11 +60,8 @@ a:link {
 //////////////////////////////////////////////////////////////////////////////////////////// **/
 
 #grid-index {
-        -ms-display: grid;
         display: grid;
-        -ms-grid-template-columns: minmax(40px,1fr) minmax(240px,800px) minmax(40px, 1fr);
         grid-template-columns: minmax(40px,1fr) minmax(240px,800px) minmax(40px, 1fr);
-        -ms-grid-row-gap: 40px;
         grid-row-gap: 40px;
         transition: margin 1s;
         position: relative;
