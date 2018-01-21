@@ -16,8 +16,11 @@
 		<div class="corps">
 			<h1 class="grosh1">MENTIONS LEGALES</h1>
 
-			<h2>Editeur</h2>
-			<p> Département MMI de l'IUT de CHAMBERY</p>
+			<h2>Emetteurs</h2>
+			<p>
+				<a href="http://mmi.univ-savoie.fr/site/" target="_blank"><img src="../images/partenaires/logoMMI.png" height="60"/></a>
+				<a href="https://www.univ-smb.fr/" target="_blank"><img src="../images/partenaires/logoUSMB.png" height="60"/></a>
+			</p>
 
 			<h2>Hébergement</h2>
 			<p>Hébergement réalisé par l'Université de Savoie.</p>
