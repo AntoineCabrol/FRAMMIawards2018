@@ -49,12 +49,7 @@
 
                 <section id="description"> <!-- DESCRIPTION -->
                         <p>
-                                Le festival des FRAMMI Awards est un <span>Festival de réalisations audiovisuelles pour étudiants</span>.
-                                Depuis la première édition de 2010, l’événement invite à découvrir des courts-métrages réalisés par des étudiants qui souhaitent présenter leur réalisation. Notre objectif principal est de <span>partager</span> autour d’un événement qui alliera professionnalisme et convivialité en regroupant des étudiants autour d’une <span>passion commune</span>.
-                        </p>
-                        <p>
-                                Nous souhaitons faire découvrir les productions de jeunes talents et permettre aux participants d’être <span>récompensés</span> pour leur travail et leur dévouement.
-                                De plus, cet événement leur permettra d’avoir une première expérience en tant qu’amateur dans ce domaine. Nous avons pour objectif de <span>diffuser</span> notre passion pour l’audiovisuel et inviter des personnes à la <span>découvrir</span>.
+                                Le festival des FRAMMI Awards récompense les réalisations audiovisuelles étudiantes de passionnés pour la 9 édition consécutive. Son objectif principal est de faire découvrir les productions de jeunes talents et permettre aux participants d’être récompensés pour leur travail.
                         </p>
                 </section>
 
@@ -106,7 +101,6 @@
                                                 <a href="https://goo.gl/QXbAU2" target="_blank">Relative Liberté</a></p>
         				<p class="cat4"><span>Prix du jury :</span>
                                                 <a href="https://goo.gl/zhPwjY" target="_blank">Too Menu Choices</a></p>
-        				<p> (2018 inaugurera la catégorie écoles)</p>
         			</div>
                         </div>
                 </section>
@@ -128,8 +122,8 @@
 
                 <section id="partenaires">
                         <h1>Nos partenaires</h1>
-			<a href="http://mmi.univ-savoie.fr/site/" target="_blank"><img src="images/partenaires/logoMMI.png" width="auto"/></a>
-			<a href="https://www.univ-smb.fr/" target="_blank"><img src="images/partenaires/logoUSMB.png" width="auto"/></a>
+			<a href="http://www.olivermichael.com/" target="_blank"><img src="images/partenaires/OliverMichael.png" width="auto"/></a>
+			<a href="http://www.lasergame-evolution.com/fr/5/Chambery/" target="_blank"><img src="images/partenaires/lasergame.png" width="auto"/></a>
 			<a href="http://www.toulontoutcourt.com/" target="_blank"><img src="images/partenaires/logoToulontoutcourt.png" width="auto"/></a>
 			<!--a href="" target="_blank"><img src="images/partenaires/votrelogo.jpg" width="auto"/></a>
 			<a href="" target="_blank"><img src="images/partenaires/votrelogo.jpg" width="auto"/></a-->
