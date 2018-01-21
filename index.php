@@ -49,7 +49,7 @@
 
                 <section id="description"> <!-- DESCRIPTION -->
                         <p>
-                                Le festival des FRAMMI Awards récompense les réalisations audiovisuelles étudiantes de passionnés pour la 9 édition consécutive. Son objectif principal est de faire découvrir les productions de jeunes talents et permettre aux participants d’être récompensés pour leur travail.
+                                Le festival des FRAMMI Awards récompense les réalisations audiovisuelles étudiantes de passionnés pour la 9<sup>ème</sup> édition consécutive. Son objectif principal est de faire découvrir les productions de jeunes talents et permettre aux participants d’être récompensés pour leur travail.
                         </p>
                 </section>
 
