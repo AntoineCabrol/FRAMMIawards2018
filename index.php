@@ -49,7 +49,9 @@
 
                 <section id="description"> <!-- DESCRIPTION -->
                         <p>
-                                Le festival des FRAMMI Awards récompense les réalisations audiovisuelles étudiantes de passionnés pour la 9<sup>ème</sup> édition consécutive. Son objectif principal est de faire découvrir les productions de jeunes talents et permettre aux participants d’être récompensés pour leur travail.
+                                Le festival des FRAMMI Awards est un Festival de réalisations audiovisuelles étudiantes organisé par des étudiants du DUT MMI (Métiers du Multimédias et de l’Internet) de Chambéry. Depuis la première édition de 2010, l’événement invite à découvrir des courts-métrages réalisés par des étudiants. Notre objectif principal est de partager une passion commune autour d’un événement qui alliera professionnalisme et convivialité en regroupant des étudiants de différents horizons. <br>
+
+                                <br>Cette année la 9ème édition de FRAMMI Awards aura lieu le Lundi 5 mars 2018 à la salle Jean Renoir à Chambéry. Les étudiants inscrits à cette évènement auront jusquv’au Dimanche 18 février 2018 pour remettre leur courts métrages.
                         </p>
                 </section>
 
