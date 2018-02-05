@@ -1,0 +1,89 @@
+#pingouin {
+        position: relative;}
+        #pingouin .tete {
+        position: absolute;
+        left: calc(50% - (100px / 2) );
+        height: 110px;
+        width: 100px;
+        	background: lightgrey;
+        	border-radius: 50px;
+        z-index: 1;}
+        #pingouin .cheveu {
+        	position: absolute;
+        	height: 25px;
+        	width: 15px;
+        	border: 2px solid transparent;
+        	border-right: 1px solid #000;
+        	border-radius: 50%;
+        	transform: rotate(-36deg);
+        	left: calc(50% - 12px);
+        	top: -4px;}
+        #pingouin .yeux {
+        	position: absolute;
+        	top: 35px;
+        	width: 46px;
+        	display: flex;
+        	justify-content: space-between;
+        	left: calc(50% - (46px / 2) );}
+                #pingouin .yeux div {
+                        position: relative;
+                        background: #FFF;
+                        height: 20px;
+                        width: 13px;
+                        border-radius: 45%;}
+                        #pingouin .yeux div div {
+                                position: absolute;
+                                width: 6px;
+                                height: 6px;
+                                background: #000;}
+                                #pingouin .yeux div:nth-child(1) div {
+                                        top: 5px;
+                                        right: 2px;}
+                                #pingouin .yeux div:nth-child(2) div {
+                                        top: 5px;
+                                        left: 2px;}
+        #pingouin .ailes {
+        	z-index: 0;
+                position: relative;
+                top: 90px;
+                left: calc(50% - (150px / 2) );
+        	width: 150px;}
+                #pingouin .ailes div {
+                        position: absolute;
+                        width: 40px;
+                        height: 130px;
+                        background: #000;
+                        border-radius: 50%;}
+                        #pingouin .ailes div:nth-child(1) {
+                                left: -14px;
+                                transform: rotate(15deg);}
+                        #pingouin .ailes div:nth-child(2) {
+                                right: -14px;
+                                transform: rotate(-15deg);}
+        #pingouin .buste {
+                position: absolute;
+        	top: 60px;
+                left: calc(50% - (150px / 2) );
+        	width: 150px;
+        	height: 220px;
+        	background: lightgrey;
+        	border-radius: 100% 100% 100px 100px;
+                z-index: 1;}
+        #pingouin .pattes {
+                position: absolute;
+                top: 260px;
+                left: calc(50% - (150px / 2));
+                width: 150px;
+                z-index: 1;}
+                #pingouin .pattes div {
+                        width: 40px;
+                        height: 30px;
+                        background: orange;
+                        border-radius: 100%;
+                        position: absolute;}
+                        #pingouin .pattes div:nth-child(1) {
+                                left: 20px;
+                                transform: rotate(15deg);}
+                        #pingouin .pattes div:nth-child(2) {
+                                right: 20px;
+                                transform: rotate(-15deg);}
