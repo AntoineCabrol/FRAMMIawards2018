@@ -125,7 +125,7 @@
                 <section id="partenaires">
                         <h1>Nos partenaires</h1>
 			<a href="http://www.olivermichael.com/" target="_blank"><img src="images/partenaires/OliverMichael.png" width="auto"/></a>
-			<a href="http://www.lasergame-evolution.com/fr/5/Chambery/" target="_blank"><img src="images/partenaires/lasergame.png" width="auto"/></a>
+			<a href="http://www.lasergame-evolution.com/fr/5/Chambery/" target="_blank"><img src="images/partenaires/L13.jpg" width="auto"/></a>
 			<a href="http://www.toulontoutcourt.com/" target="_blank"><img src="images/partenaires/logoToulontoutcourt.png" width="auto"/></a>
 			<!--a href="" target="_blank"><img src="images/partenaires/votrelogo.jpg" width="auto"/></a>
 			<a href="" target="_blank"><img src="images/partenaires/votrelogo.jpg" width="auto"/></a-->
