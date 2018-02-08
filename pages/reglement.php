@@ -3,7 +3,7 @@
 	<head>
 		<?php include("../include/inc_meta.php") ?>
                 <?php include("../include/inc_analytics.php") ?>
-		<link rel="stylesheet" href="..\global.css" />
+		<link rel="stylesheet" href="../global.css" />
 		<title>FRAMMI - Mentions légales</title>
 	</head>
 
