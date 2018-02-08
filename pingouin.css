@@ -1,89 +1,134 @@
 #pingouin {
         position: relative;}
+        #pingouin * {position: absolute; width: 100%;}
         #pingouin .tete {
-        position: absolute;
-        left: calc(50% - (100px / 2) );
-        height: 110px;
-        width: 100px;
+                left: calc(50% - (90px / 2) );
+                height: 80px;
+                width: 90px;
         	background: lightgrey;
         	border-radius: 50px;
-        z-index: 1;}
-        #pingouin .cheveu {
-        	position: absolute;
-        	height: 25px;
-        	width: 15px;
-        	border: 2px solid transparent;
-        	border-right: 1px solid #000;
-        	border-radius: 50%;
-        	transform: rotate(-36deg);
-        	left: calc(50% - 12px);
-        	top: -4px;}
-        #pingouin .yeux {
-        	position: absolute;
-        	top: 35px;
-        	width: 46px;
-        	display: flex;
-        	justify-content: space-between;
-        	left: calc(50% - (46px / 2) );}
-                #pingouin .yeux div {
-                        position: relative;
-                        background: #FFF;
-                        height: 20px;
-                        width: 13px;
-                        border-radius: 45%;}
-                        #pingouin .yeux div div {
-                                position: absolute;
-                                width: 6px;
-                                height: 6px;
-                                background: #000;}
-                                #pingouin .yeux div:nth-child(1) div {
-                                        top: 5px;
-                                        right: 2px;}
-                                #pingouin .yeux div:nth-child(2) div {
-                                        top: 5px;
-                                        left: 2px;}
+                z-index: 2;}
+                #pingouin .cheveu {
+                	height: 25px;
+                	width: 15px;
+                	border: 2px solid transparent;
+                	border-right: 1px solid #000;
+                	border-radius: 50%;
+                	transform: rotate(-36deg);
+                	left: calc(50% - 12px);
+                	top: -4px;
+                        z-index: 1;}
+                #pingouin .yeux {
+                	top: 25px;
+                	width: 40px;
+                	display: flex;
+                	justify-content: space-between;
+                	left: calc(50% - (40px / 2) );
+                        z-index: 1;}
+                        #pingouin .yeux div {
+                                position: relative;
+                                background: #FFF;
+                                height: 17px;
+                                width: 11px;
+                                border-radius: 45%;}
+                                #pingouin .yeux div div {
+                                        width: 4px;
+                                        height: 5px;
+                                        background: #000;}
+                                        #pingouin .yeux div:nth-child(1) div {
+                                                position: absolute;
+                                                top: 6px;
+                                                right: 2px;}
+                                        #pingouin .yeux div:nth-child(2) div {
+                                                top: 6px;
+                                                left: 2px;}
+                #pingouin .bec {
+                        top: 50px;
+                        left: calc(50% - (70px / 2) );
+                        width: 70px;
+                        z-index: 1;}
+                        /** bec base **/
+                        #pingouin .bec .bec-base div {background: orange;}
+                        #pingouin .bec .bec-base div:first-child,
+                        #pingouin .bec .bec-base div:last-child {
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 100%;}
+                        #pingouin .bec .bec-base div:last-child {right: 0;}
+                        #pingouin .bec .bec-base div:nth-child(2) {
+                                height: 20px;
+                                width: 85%;
+                                border-radius: 50%;
+                                left: calc(50% - (85% / 2));}
+                        /** bec pointe **/
+                        #pingouin .bec .bec-pointe div {background: darkorange;}
+                        #pingouin .bec .bec-pointe div:first-child {
+                                height: 20px;
+                                border-radius: 100%;
+                                width: 60%;
+                                left: calc(50% - (60% / 2));}
+                        #pingouin .bec .bec-pointe div:last-child {
+                                width: 16%;
+                                height: 20px;
+                                border-radius: 100%;
+                                left: calc(50% - (16% / 2));
+                                top: -8px;}
+                #pingouin .bourrelet {
+                        top: 20px;
+                        height: 90px;
+                        background: lightgray;
+                        border-radius: 100%;
+                        width: 110%;
+                        left: calc(50% - (110% / 2));
+                        z-index: 0;}
         #pingouin .ailes {
         	z-index: 0;
                 position: relative;
-                top: 90px;
+                top: 80px;
                 left: calc(50% - (150px / 2) );
         	width: 150px;}
                 #pingouin .ailes div {
-                        position: absolute;
                         width: 40px;
-                        height: 130px;
+                        height: 150px;
                         background: #000;
                         border-radius: 50%;}
-                        #pingouin .ailes div:nth-child(1) {
+                        #pingouin .ailes > div:nth-child(1) {
                                 left: -14px;
                                 transform: rotate(15deg);}
-                        #pingouin .ailes div:nth-child(2) {
+                        #pingouin .ailes > div:nth-child(2) {
                                 right: -14px;
                                 transform: rotate(-15deg);}
         #pingouin .buste {
-                position: absolute;
-        	top: 60px;
+        	top: 50px;
                 left: calc(50% - (150px / 2) );
         	width: 150px;
-        	height: 220px;
+        	height: 240px;
         	background: lightgrey;
-        	border-radius: 100% 100% 100px 100px;
+        	border-radius: 100% 100% 80px 80px;
                 z-index: 1;}
         #pingouin .pattes {
-                position: absolute;
-                top: 260px;
+                top: 278px;
                 left: calc(50% - (150px / 2));
                 width: 150px;
-                z-index: 1;}
+                z-index: 0;}
                 #pingouin .pattes div {
                         width: 40px;
                         height: 30px;
                         background: orange;
-                        border-radius: 100%;
-                        position: absolute;}
-                        #pingouin .pattes div:nth-child(1) {
-                                left: 20px;
-                                transform: rotate(15deg);}
-                        #pingouin .pattes div:nth-child(2) {
-                                right: 20px;
+                        border-radius: 100%;}
+                        #pingouin .pattes div div {
+                                background: darkorange;
+                                width: 10px;
+                                top: 3px;}
+                        #pingouin .pattes div:first-child {
+                                left: 15px;
+                                transform: rotate(20deg);}
+                                #pingouin .pattes div:first-child div {
+                                        left: calc(50% - (10px / 2));
+                                        transform: rotate(15deg);}
+                        #pingouin .pattes div:last-child {
+                                right: 15px;
                                 transform: rotate(-15deg);}
+                                #pingouin .pattes div:last-child div {
+                                        right: calc(50% - (10px / 2));
+                                        transform: rotate(-20deg);}
