@@ -32,6 +32,10 @@ a:link {
         a:hover {text-decoration: underline;}
         a:visited {text-decoration: none; color: inherit;}
 
+time {
+        text-decoration-line: underline;
+	text-decoration-style: dotted;}
+
 @font-face {
         font-family: 'USHeavy';
         src: url('fonts/UniSans/UniSansHeavy.woff') format('woff');
@@ -685,6 +689,7 @@ a.localisation-bouton {color: #FFF;}
         width: 150px;
         padding: 0 15px;
         background: #9a0000;
+        border: 1px solid #9a0000;
         text-decoration: none;
         line-height: 2;
         text-align: center;
@@ -697,7 +702,6 @@ a.localisation-bouton {color: #FFF;}
         width: 160px;
         color: #9a0000;
         background: transparent;
-        border: 1px solid #9a0000;
         text-decoration: none;
         transition: margin 0.4s, width 0.4s, background 0.4s, color 0.4s;
 }
@@ -721,7 +725,12 @@ a.localisation-bouton {color: #FFF;}
         margin-bottom: 30px;}
 #partenaires img {
         height: 70px;
-        margin-bottom: 20px;}
+        margin: 0px 20px 20px;
+        opacity: 0.8;
+        transition: 0.2s ease opacity;}
+        #partenaires img:hover {
+                opacity: 1;
+                transition: 0.2s ease opacity;}
 
 
 /***************************************
