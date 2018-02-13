@@ -821,6 +821,13 @@ body#pages{border: 0;}
                 line-height: 30px;
                 padding: 0 20px;
                 box-sizing: border-box;}
+        #pages #envoi input,
+        #pages #envoi .textarea {
+                font-family: 'Roboto', Arial;
+                font-size: 14px;}
+                #pages #envoi textarea::placeholder {
+                        font-family: 'Roboto', Arial;
+                        font-size: 14px;}
         #pages #envoi .light:nth-of-type(1) {flex: 1; margin-right: 5px;}
         #pages #envoi .light:nth-of-type(2) {flex: 1; margin-left: 5px;}
         #pages #envoi .light:nth-of-type(3) {width: 100%; margin: 10px 0;}
@@ -830,15 +837,25 @@ body#pages{border: 0;}
                 width: 100%;
                 background-color: #303030;
                 color: #FFF;}
+                #pages #envoi input.dark::placeholder {color: #FFF;}
         #pages #envoi .dark:nth-of-type(1) {margin: 10px 0;}
         #pages #envoi .captcha,
         #pages #envoi input[type="button"] {
-                max-width: 360px;
+                box-sizing: border-box;
+                text-align: center;
+                max-width: 410px;
+                font-size: 18px;
+                padding: 5px;
                 margin: auto;
                 width: 100%;}
                 #pages #envoi .captcha {
                         color: #990000;
-                        border: 2px solid #990000;}
+                        border: 2px solid #990000;
+                        padding: 20px;
+                        vertical-align: middle;}
+                        #pages #envoi .captcha:focus {
+                                color: #FFF;
+                                background: #990000;}
                 #pages #envoi input[type="button"] {
                         border: 2px solid #303030;
                         line-height: 30px;
@@ -914,6 +931,13 @@ body#pages{border: 0;}
                 .cat .cat2  span::before {display: none;}
         #localisation {flex-direction: column;}
                 .localisation-bouton, .localisation-bouton:hover {margin :auto 25px 25px auto;}
+        #pages #envoi {
+        	flex-flow: column;}
+                #pages #envoi .light:nth-of-type(1) {width: 100%; margin: 0 0 10px 0;}
+                #pages #envoi .light:nth-of-type(2) {width: 100%; margin: 0 0 10px 0;}
+                #pages #envoi .light:nth-of-type(3) {width: 100%; margin: 0 0 10px 0;}
+                #pages #envoi .light:nth-of-type(4) {flex: 1; width: 100%;  margin: 0 0 5px 0;}
+                #pages #envoi .light:nth-of-type(5) {flex: 1; margin-left: 0;}
 }
 
 @media (max-width: 480px) {
