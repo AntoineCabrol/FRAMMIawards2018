@@ -781,7 +781,7 @@ footer#contact > div {
 body#pages{border: 0;}
         #pages .header {
         	background-color: #990000;
-        	color: white;
+        	color: #FFF;
         	margin: 0;
         	text-align: left;}
                 #pages .retour {
@@ -801,6 +801,54 @@ body#pages{border: 0;}
         	font-size: 20px;}
         #pages p {margin-top: 0;}
                 #pages h2+p {margin-top: 0;}
+
+#pages #envoi {
+        display: flex;
+        flex-flow: wrap;}
+        #pages #envoi input {
+                opacity: 1;
+                position: inherit;}
+        #pages #envoi h1,
+        #pages #envoi h2,
+        #pages #envoi p {width: 100%; text-align: center;}
+                #pages #envoi h1 {margin-bottom: 40px;}
+                #pages #envoi h2 {margin: 30px 0;}
+                #pages #envoi p {margin: 20px 0;}
+        #pages #envoi .light,
+        #pages #envoi .dark {
+                border: 2px solid #303030;
+                width: auto;
+                line-height: 30px;
+                padding: 0 20px;
+                box-sizing: border-box;}
+        #pages #envoi .light:nth-of-type(1) {flex: 1; margin-right: 5px;}
+        #pages #envoi .light:nth-of-type(2) {flex: 1; margin-left: 5px;}
+        #pages #envoi .light:nth-of-type(3) {width: 100%; margin: 10px 0;}
+        #pages #envoi .light:nth-of-type(4) {flex: 3; margin-right: 5px;}
+        #pages #envoi .light:nth-of-type(5) {flex: 1; margin-left: 5px;}
+        #pages #envoi .dark {
+                width: 100%;
+                background-color: #303030;
+                color: #FFF;}
+        #pages #envoi .dark:nth-of-type(1) {margin: 10px 0;}
+        #pages #envoi .captcha,
+        #pages #envoi input[type="button"] {
+                max-width: 360px;
+                margin: auto;
+                width: 100%;}
+                #pages #envoi .captcha {
+                        color: #990000;
+                        border: 2px solid #990000;}
+                #pages #envoi input[type="button"] {
+                        border: 2px solid #303030;
+                        line-height: 30px;
+                        background: transparent;
+                        margin-top: 10px;}
+                        #pages #envoi input[type="button"]:hover,
+                        #pages #envoi input[type="button"]:active {
+                                background: #303030;
+                                color: #FFF;}
+
 
 
 

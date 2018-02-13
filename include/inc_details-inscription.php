@@ -30,6 +30,6 @@
 <p>
         En cliquant sur participer, vous acceptez les conditions de participation et vous allez être redirigé vers la page de dépôt.
 </p>
-<form method="post" action="../pages/inscription.php">
+<form method="post" action="https://mmi.univ-smb.fr/~cabrola/FRAMMIawards/pages/inscription.php">
         <input type="submit" value="formulaire" class="formulaire"/>
 </form>
