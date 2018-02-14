@@ -79,7 +79,7 @@ time {
 /***************************************
                    MENU
 ***************************************/
-input {
+input.ctrl {
         position: fixed;
         cursor: pointer;
         margin: 0;
@@ -269,7 +269,7 @@ header {
         grid-row: 1/2;
         background-color: #303030;
         color: #FFF;
-        height: 500px;
+        min-height: 500px;
         position: relative;
         overflow: hidden;}
         header::after {
@@ -288,15 +288,43 @@ header {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        z-index: 0;
-}
+        z-index: 0;}
 
-#logo {
-	margin: auto;
+header > div:first-of-type {
+        display: flex;
+        flex-flow: column;
         width: 80%;
-        max-width: 500px;
-        z-index: 1;
-}
+        max-width: 720px;
+        margin: auto;
+        z-index: 1;}
+        #logo {
+                max-width: 500px;
+        	margin: auto;
+                width: 100%;}
+        header .infos-header {
+                overflow: hidden;
+                height: 0;
+                margin-top: 20px;
+                animation-name: infosHeader;
+                animation-duration: 1s;
+                animation-delay: 2s;
+                animation-timing-function: ease;
+                animation-fill-mode: both;}
+                @keyframes infosHeader {
+                        0% {height: 0;}
+                        100% {height: 87px;}
+                }
+        header .infos-header > div {
+                display: flex;
+                flex-flow: column;
+                margin: auto;
+                max-width: 400px;
+                font-size: 24px;
+                text-align: center;
+                text-transform: uppercase;}
+                header span {font-family: 'USThin', Arial;}
+                header span:nth-of-type(1) {font-family: 'USHeavy', Arial Black;}
+
 
 
 /***************************************
@@ -779,6 +807,7 @@ footer#contact > div {
                 max-width: 600px;
                 margin: 0 auto 10px;
         	text-align: center;
+                vertical-align: middle;
         	color: white;
                 z-index: 1;}
 
@@ -814,9 +843,14 @@ body#pages{border: 0;}
 #pages #envoi {
         display: flex;
         flex-flow: wrap;}
-        #pages #envoi input {
-                opacity: 1;
-                position: inherit;}
+        #page #envoi *,
+        #page #envoi input, #page #envoi textarea,
+        #page #envoi input::placeholder, #page #envoi textarea::placeholder {
+                position: relative;
+                font-family: 'Roboto', Arial;
+                font-size: 14px;
+                opacity: 1;}
+                #page #envoi input {position: inherit; opacity: 1;}
         #pages #envoi h1,
         #pages #envoi h2,
         #pages #envoi p {width: 100%; text-align: center;}
@@ -827,16 +861,12 @@ body#pages{border: 0;}
         #pages #envoi .dark {
                 border: 2px solid #303030;
                 width: auto;
-                line-height: 30px;
-                padding: 0 20px;
-                box-sizing: border-box;}
-        #pages #envoi input,
-        #pages #envoi .textarea {
-                font-family: 'Roboto', Arial;
-                font-size: 14px;}
-                #pages #envoi textarea::placeholder {
-                        font-family: 'Roboto', Arial;
-                        font-size: 14px;}
+                padding: 10px 20px;
+                box-sizing: border-box;
+                font-size: 14px;
+                font-family: 'Roboto', Arial;}
+        #pages #envoi textarea {
+                padding: 10px 20px;}
         #pages #envoi .light:nth-of-type(1) {flex: 1; margin-right: 5px;}
         #pages #envoi .light:nth-of-type(2) {flex: 1; margin-left: 5px;}
         #pages #envoi .light:nth-of-type(3) {width: 100%; margin: 10px 0;}
@@ -844,12 +874,11 @@ body#pages{border: 0;}
         #pages #envoi .light:nth-of-type(5) {flex: 1; margin-left: 5px;}
         #pages #envoi .dark {
                 width: 100%;
+                margin: 10px 0;
                 background-color: #303030;
                 color: #FFF;}
-                #pages #envoi input.dark::placeholder {color: #FFF;}
-        #pages #envoi .dark:nth-of-type(1) {margin: 10px 0;}
         #pages #envoi .captcha,
-        #pages #envoi input[type="button"] {
+        #pages #envoi input[type="submit"] {
                 box-sizing: border-box;
                 text-align: center;
                 max-width: 410px;
@@ -861,17 +890,18 @@ body#pages{border: 0;}
                         color: #990000;
                         border: 2px solid #990000;
                         padding: 20px;
-                        vertical-align: middle;}
+                        font-family: 'Roboto', Arial;
+                        font-size: 16px;}
                         #pages #envoi .captcha:focus {
                                 color: #FFF;
                                 background: #990000;}
-                #pages #envoi input[type="button"] {
+                #pages #envoi input[type="submit"] {
                         border: 2px solid #303030;
                         line-height: 30px;
                         background: transparent;
                         margin-top: 10px;}
-                        #pages #envoi input[type="button"]:hover,
-                        #pages #envoi input[type="button"]:active {
+                        #pages #envoi input[type="submit"]:hover,
+                        #pages #envoi input[type="submit"]:active {
                                 background: #303030;
                                 color: #FFF;}
 

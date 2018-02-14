@@ -8,9 +8,9 @@
   </head>
 
   <body>
-        <input type="checkbox" class="lien-tactile-menu"/>
-        <input type="radio" name="option-menu" class="lien-tactile-inscription" onClick="location.href='#'"/>
-        <input type="radio" name="option-menu" class="lien-neutre" checked/>
+        <input type="checkbox" class="ctrl lien-tactile-menu"/>
+        <input type="radio" name="option-menu" class="ctrl lien-tactile-inscription" onClick="location.href='#'"/>
+        <input type="radio" name="option-menu" class="ctrl lien-neutre" checked/>
         <div class="bouton">
                 <div class="ligne-menu"></div>
                 <div class="ligne-menu"></div>
@@ -41,7 +41,16 @@
 
         <section id="grid-index">
                 <header> <!-- ENTETE -->
-                        <img src="images/logo_blanc.png" id="logo" alt="logo">
+                        <div>
+                                <img src="images/logo_blanc.png" id="logo" alt="logo">
+                                <div class="infos-header">
+                                        <div>
+                                                <span>Lundi 5 mars 2018 à 19h</span>
+                                                <span>Salle Jean Renoir</span>
+                                                <span>à Chambéry</span>
+                                        </div>
+                                </div>
+                        </div>
                         <video poster="videos/poster1.png" id="bgvideo" autoplay loop muted>
                                 <source src="videos/bgvideo.mp4" type="video/mp4">
                         </video>
@@ -76,8 +85,8 @@
                 </section>
 
                 <section id="participer"> <!-- BOUTON INSCRIPTION -->
-                        <input type="radio" name="inscription-accueil" class="bouton-accueil"/>
-                        <input type="radio" name="inscription-accueil" class="bouton-accueil-close" checked/>
+                        <input type="radio" name="inscription-accueil" class="ctrl bouton-accueil"/>
+                        <input type="radio" name="inscription-accueil" class="ctrl bouton-accueil-close" checked/>
                         <div class="inscription-popup">
                                 <div class="traits-inscription-popup">
                                         <div class="trait"></div>
