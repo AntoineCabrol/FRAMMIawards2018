@@ -916,7 +916,7 @@ body#pages{border: 0;}
         input.lien-tactile-inscription:checked ~ nav#menu {left: -260px;}
         input.lien-tactile-inscription:checked ~ .fond-bouton {border-color: #303030;}
         input.lien-tactile-inscription:checked ~ .bouton .ligne-menu {background-color: #303030;}
-        input.lien-tactile-inscription:checked  ~ #zone-expend {margin-left: 0; transition: margin-left 0.7s ease 0.4s;}
+        input.lien-tactile-inscription:checked ~ #zone-expend {margin-left: 0; transition: margin-left 0.7s ease 0.4s;}
         input.lien-tactile-inscription:checked ~ #zone-expend #inscription {margin: 20px 5% auto 76px;}
         input.lien-neutre {width: 80px; height: 80px;}
         .inscription-popup {padding: 0 60px 0 20px;}

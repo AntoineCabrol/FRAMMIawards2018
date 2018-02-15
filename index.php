@@ -138,8 +138,7 @@
 			<a href="http://www.toulontoutcourt.com/" target="_blank"><img src="images/partenaires/logoToulontoutcourt.png" width="auto"/></a>
 			<a href="http://afs.fr/" target="_blank"><img src="images/partenaires/afs.png" width="auto"/></a>
 			<a href="https://www.ldlc.com/" target="_blank"><img src="images/partenaires/LDLC.jpg" width="auto"/></a>
-                        <a href="https://www.redbull.com/fr-fr/" target="_blank"><img src="images/partenaires/redbull.png" width="auto"/></a>
-                        <!--a href="" target="_blank"><img src="images/partenaires/votrelogo.jpg" width="auto"/></a-->
+            <!--a href="" target="_blank"><img src="images/partenaires/votrelogo.jpg" width="auto"/></a-->
 		</section>
 
                 <?php include("include/inc_pied.php") ?>
