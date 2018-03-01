@@ -314,7 +314,7 @@ header > div:first-of-type {
                         0% {height: 0;}
                         100% {height: 87px;}
                 }
-        header .infos-header > div {
+        header .infos-header div {
                 display: flex;
                 flex-flow: column;
                 margin: auto;
@@ -324,6 +324,23 @@ header > div:first-of-type {
                 text-transform: uppercase;}
                 header span {font-family: 'USThin', Arial;}
                 header span:nth-of-type(1) {font-family: 'USHeavy', Arial Black;}
+        header .infos-header a:hover {text-decoration: none;}
+        header .infos-header div.bouton-vote {
+                display: flex;
+                flex-flow: row;
+                width: 100%;
+                height: 100%;
+                max-height: 87px;
+                background: #9A0000;
+                font-size: 30px;
+                font-family: USheavy;}
+                header .infos-header div.bouton-vote img {
+                        margin: 0 10px 0 auto;
+                        width: 65px;}
+                header .infos-header div.bouton-vote span {
+                        height: 100%;
+                        line-height: 87px;
+                        margin: 0 auto 0 0;}
 
 
 
@@ -904,6 +921,43 @@ body#pages{border: 0;}
                         #pages #envoi input[type="submit"]:active {
                                 background: #303030;
                                 color: #FFF;}
+
+
+
+/** ////////////////////////////////////////////////////////////////////////////////////////////
+                                        VOTE
+//////////////////////////////////////////////////////////////////////////////////////////// **/
+
+#vote {}
+
+#vote input:invalid+span:after {
+        position: absolute;
+        content: '✖';
+        padding-left: 5px;}
+
+#vote input:valid+span:after {
+        position: absolute;
+        content: '✓';
+        padding-left: 5px;}
+
+
+
+/** ////////////////////////////////////////////////////////////////////////////////////////////
+                                        VOTE 2
+//////////////////////////////////////////////////////////////////////////////////////////// **/
+
+#vote2 {}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

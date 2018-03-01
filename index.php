@@ -49,6 +49,10 @@
                                                 <span>Salle Jean Renoir</span>
                                                 <span>à Chambéry</span>
                                         </div>
+                                        <!--a href="pages/vote.php"><div class="bouton-vote">
+                                                <img src="images/icones/deadline.svg" width="auto">
+                                                <span>VOTEZ</span>
+                                        </div></a-->
                                 </div>
                         </div>
                         <video poster="videos/poster1.png" id="bgvideo" autoplay loop muted>
