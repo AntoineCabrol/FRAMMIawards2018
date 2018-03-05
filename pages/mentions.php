@@ -20,6 +20,7 @@
 			<p>
 				<a href="http://mmi.univ-savoie.fr/site/" target="_blank"><img src="../images/partenaires/logoMMI.png" height="60"/></a>
 				<a href="https://www.univ-smb.fr/" target="_blank"><img src="../images/partenaires/logoUSMB.png" height="60"/></a>
+				<a href="https://www.facebook.com/asso.dahiut" target="_blank"><img src="../images/partenaires/DAHIUT.jpg" height="60">
 			</p>
 
 			<h2>Hébergement</h2>
