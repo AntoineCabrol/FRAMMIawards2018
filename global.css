@@ -1030,7 +1030,7 @@ body#pages{border: 0;}
         #vote2 a, #vote2 a:hover {text-decoration: none;}
         #vote2 form div {
         	display: grid;
-        	grid-template-columns: repeat(5, auto);
+        	grid-template-columns: repeat(5, 1fr);
         	width: 90%;
         	max-width: 1200px;
         	margin: 0 auto;}
@@ -1038,13 +1038,14 @@ body#pages{border: 0;}
                         position: relative;
                         display: flex;
                         justify-content: center;
+                        text-align: center;
                 	width: 100%;
                         height: 100px;
                 	padding: 10px 20px;
                 	box-sizing: border-box;
                 	color: #FFF;
                         background-color: #303030;
-                	background-color: rgba(48, 48, 48, 0.8);
+                	background-color: rgba(48, 48, 48, 0.6);
                         transition: all 0.2s;}
                         #vote2 form div a:hover div {
                                 color: transparent;
@@ -1059,23 +1060,24 @@ body#pages{border: 0;}
                         width: 100%;
                         height: 100%;
                         background-repeat: no-repeat;
-                        background-size: cover;}
-                        #vote2 form a[href="vote2.php?id=1"] div::before { background-image: url("images/miniatures/min_1.png");}
-                        #vote2 form a[href="vote2.php?id=2"] div::before { background-image: url("images/miniatures/min_2.png");}
-                        #vote2 form a[href="vote2.php?id=3"] div::before { background-image: url("images/miniatures/min_3.png");}
-                        #vote2 form a[href="vote2.php?id=4"] div::before { background-image: url("images/miniatures/min_4.png");}
-                        #vote2 form a[href="vote2.php?id=5"] div::before { background-image: url("images/miniatures/min_5.png");}
-                        #vote2 form a[href="vote2.php?id=6"] div::before { background-image: url("images/miniatures/min_6.png");}
-                        #vote2 form a[href="vote2.php?id=7"] div::before { background-image: url("images/miniatures/min_7.png");}
-                        #vote2 form a[href="vote2.php?id=8"] div::before { background-image: url("images/miniatures/min_8.png");}
-                        #vote2 form a[href="vote2.php?id=9"] div::before { background-image: url("images/miniatures/min_9.png");}
-                        #vote2 form a[href="vote2.php?id=9"] div::before { background-image: url("images/miniatures/min_9.png");}
-                        #vote2 form a[href="vote2.php?id=10"] div::before { background-image: url("images/miniatures/min_10.png");}
-                        #vote2 form a[href="vote2.php?id=11"] div::before { background-image: url("images/miniatures/min_11.png");}
-                        #vote2 form a[href="vote2.php?id=12"] div::before { background-image: url("images/miniatures/min_12.png");}
-                        #vote2 form a[href="vote2.php?id=13"] div::before { background-image: url("images/miniatures/min_13.png");}
-                        #vote2 form a[href="vote2.php?id=15"] div::before { background-image: url("images/miniatures/min_14.png");}
-                        #vote2 form a[href="vote2.php?id=15"] div::before { background-image: url("images/miniatures/min_15.png");}
+                        background-size: cover;
+                        background-position: center;}
+                        #vote2 form a[href="vote2.php?id=1"] div::before { background-image: url("images/miniatures/min_1.jpg");}
+                        #vote2 form a[href="vote2.php?id=2"] div::before { background-image: url("images/miniatures/min_2.jpg");}
+                        #vote2 form a[href="vote2.php?id=3"] div::before { background-image: url("images/miniatures/min_3.jpg");}
+                        #vote2 form a[href="vote2.php?id=4"] div::before { background-image: url("images/miniatures/min_4.jpg");}
+                        #vote2 form a[href="vote2.php?id=5"] div::before { background-image: url("images/miniatures/min_5.jpg");}
+                        #vote2 form a[href="vote2.php?id=6"] div::before { background-image: url("images/miniatures/min_6.jpg");}
+                        #vote2 form a[href="vote2.php?id=7"] div::before { background-image: url("images/miniatures/min_7.jpg");}
+                        #vote2 form a[href="vote2.php?id=8"] div::before { background-image: url("images/miniatures/min_8.jpg");}
+                        #vote2 form a[href="vote2.php?id=9"] div::before { background-image: url("images/miniatures/min_9.jpg");}
+                        #vote2 form a[href="vote2.php?id=9"] div::before { background-image: url("images/miniatures/min_9.jpg");}
+                        #vote2 form a[href="vote2.php?id=10"] div::before { background-image: url("images/miniatures/min_10.jpg");}
+                        #vote2 form a[href="vote2.php?id=11"] div::before { background-image: url("images/miniatures/min_11.jpg");}
+                        #vote2 form a[href="vote2.php?id=12"] div::before { background-image: url("images/miniatures/min_12.jpg");}
+                        #vote2 form a[href="vote2.php?id=13"] div::before { background-image: url("images/miniatures/min_13.jpg");}
+                        #vote2 form a[href="vote2.php?id=14"] div::before { background-image: url("images/miniatures/min_14.jpg");}
+                        #vote2 form a[href="vote2.php?id=15"] div::before { background-image: url("images/miniatures/min_15.jpg");}
                         #vote2 form div span {margin: auto;}
                                 #vote2 form div span::before {content: "« "}
                                 #vote2 form div span::after {content: " »"}
@@ -1101,7 +1103,7 @@ body#pages{border: 0;}
 
 @media (max-width: 1024px) {
         #vote2 form div {
-        	grid-template-columns: repeat(3, auto);}
+        	grid-template-columns: repeat(3, 1fr);}
 }
 
 @media (max-width: 720px) {
@@ -1176,7 +1178,7 @@ body#pages{border: 0;}
 
         #vote2 form div {
         	grid-template-columns: auto;}
-                #vote2 form div  div {height: 50px;}
+                #vote2 form div  div {height: 60px;}
 }
 
 @media (max-width: 480px) {
