@@ -120,6 +120,45 @@
                         </div>
                 </section>
 
+                <section id="jury">
+                        <div id="premier">
+                            <img src="images/jurys/jury-1.jpg" class="picture" width="auto" height="auto">
+                            
+                            <!-- PREMIER JURY : texte -->
+                            <div class="texte-presentation"> 
+                                <div class="nom">JULIEN LAMY-QUIQUE</div> 
+                                    <div id="jury-1"> 
+                                         <p> Professeur de communication visuelle en PEC, sensibilisé sur l'art audiovisuelle grâce à ses différentes experiences dans le domaine.<br> Apportera un jugement professionel aux créations.</p>   
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div id="deuxieme">
+                            <img src="images/jurys/jury-2.jpg" class="picture" width="auto" height="auto">
+                            
+                            <!-- DEUXIEME JURY : texte -->
+                            <div class="texte-presentation">
+                                <div class="nom">CAROLINE MONTAUD</div>
+                                    <div id="jury-2">
+                                        <p>Professeur de théatre de loisir à la MJC (Maison des Jeunes et de la Culture) de Chambéry, passionnée des arts de la comédie <br> Offrira un regard critique sur les réalisations </p>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div id="troisieme">
+                            <img src="images/jurys/jury-3.jpg" class="picture" width="auto" height="auto">
+                            
+                            <!-- TROISIEME JURY : texte -->
+                            <div class="texte-presentation">
+                                <div class="nom">JEAN-MARIE LAPERNAT</div>
+                                    <div id="jury-3">
+                                        <p> Amateur de réalisation audiovisuelles, lui même réalisateur de nombreux court-métrages. Ses domaines d'expertise: le montage, la réalisation, la scénarisation <br> Jugera grâce à ses diverses exepriences</p>
+                                    </div>
+                            </div>
+                        </div>
+
+                    </section>
+
                 <section id="localisation"> <!-- LOCALISATION -->
                         <div class="localisation-bande">
                                 <div class="localisation-contenu">
@@ -142,6 +181,7 @@
 			<a href="http://www.toulontoutcourt.com/" target="_blank"><img src="images/partenaires/logoToulontoutcourt.png" width="auto"/></a>
 			<a href="http://afs.fr/" target="_blank"><img src="images/partenaires/afs.png" width="auto"/></a>
 			<a href="https://www.ldlc.com/" target="_blank"><img src="images/partenaires/LDLC.jpg" width="auto"/></a>
+            <a href="http://socabel.com/" target="_blank"><img src="images/partenaires/socabel.jpg" width="auto"/></a>
             <!--a href="" target="_blank"><img src="images/partenaires/votrelogo.jpg" width="auto"/></a-->
 		</section>
 
