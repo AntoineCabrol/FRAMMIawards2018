@@ -194,6 +194,7 @@
 			<a href="http://afs.fr/" target="_blank"><img src="images/partenaires/afs.png" width="auto"/></a>
 			<a href="https://www.ldlc.com/" target="_blank"><img src="images/partenaires/LDLC.jpg" width="auto"/></a>
             <a href="http://socabel.com/" target="_blank"><img src="images/partenaires/socabel.jpg" width="auto"/></a>
+            <a href="http://www.hobbyone.fr/" target="_blank"><img src="images/partenaires/hobbyone.jpg" width="auto"/></a>
             <!--a href="" target="_blank"><img src="images/partenaires/votrelogo.jpg" width="auto"/></a-->
 		</section>
 
