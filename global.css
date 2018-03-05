@@ -341,6 +341,10 @@ header > div:first-of-type {
                         height: 100%;
                         line-height: 87px;
                         margin: 0 auto 0 0;}
+        header p:last-child {
+                margin: 20px auto;
+                text-align: center;
+                max-width: 400px;}
 
 
 
@@ -853,15 +857,15 @@ footer#contact > div {
 ***************************************/
 
 body#pages{border: 0;}
-        #pages .header {
+        #pages .header, #vote .header, #vote2 .header {
         	background-color: #990000;
         	color: #FFF;
         	margin: 0;
         	text-align: left;}
-                #pages .retour {
+                #pages .retour, #vote .retour, #vote2 .retour {
                         padding: 0 10px;
                         line-height: 3;}
-                        #pages .retour::before {
+                        #pages .retour::before, #vote .retour::before, #vote2 .retour::before {
                                 content: "↩ ";}
         #pages .corps{
         	display: block;
@@ -947,17 +951,74 @@ body#pages{border: 0;}
                                         VOTE
 //////////////////////////////////////////////////////////////////////////////////////////// **/
 
-#vote {}
-
-#vote input:invalid+span:after {
-        position: absolute;
-        content: '✖';
-        padding-left: 5px;}
-
-#vote input:valid+span:after {
-        position: absolute;
-        content: '✓';
-        padding-left: 5px;}
+#vote {
+	height: 100vh;
+	display: flex;
+        flex-flow: column;
+        color: #FFF;}
+        #vote .header p, #vote2 .header p {margin: 0;}
+        #vote p.error {
+                margin-top: 0;
+                color: red;
+                text-align: center;}
+        #vote h1.grosh1 {
+                color: #303030;
+                margin-top: auto;}
+        #vote form {margin-bottom: auto;}
+                #vote form > div {
+                display: flex;
+                flex-flow: wrap;
+                width: 85%;
+        	max-width: 400px;
+                margin: 0 auto;
+                padding: 40px 20px;
+                box-sizing: border-box;
+        	background: #303030;}
+                #vote form > div > div {
+                        position: relative;
+                        display: flex;
+                        width: 100%;}
+                #vote form > div > div:not(:last-child) {margin-bottom: 10px;}
+                        #vote form > div > div label {
+                                width: 51px;
+                                margin: 10px auto;
+                                box-sizing: border-box;
+                                text-align: right;}
+                        #vote form > div > div input {
+                                flex: 1;
+                                margin-left: 10px;
+                                padding: 10px 20px;
+                                box-sizing: border-box;
+                                font-size: 14px;
+                                font-family: 'Roboto', Arial;}
+                        #vote input:invalid+span:after {
+                                position: absolute;
+                                content: '✖';
+                                top: 10px;
+                                right: 20px;
+                                color: red;}
+                        #vote input:valid+span:after {
+                                position: absolute;
+                                content: '✓';
+                                top: 10px;
+                                right: 20px;
+                                color: green;}
+        #vote button {
+                display: flex;
+                justify-content: center;
+                width: 85%;
+                max-width: 400px;
+                margin: 20px auto auto auto;
+                padding: 5px;
+                box-sizing: border-box;
+                font-size: 18px;
+                border: 2px solid #303030;
+                line-height: 30px;
+                background: transparent;
+                cursor: pointer;}
+                #vote button:hover, #vote button:active {
+                        background: #303030;
+                        color: #FFF;}
 
 
 
@@ -966,6 +1027,59 @@ body#pages{border: 0;}
 //////////////////////////////////////////////////////////////////////////////////////////// **/
 
 #vote2 {}
+        #vote2 a, #vote2 a:hover {text-decoration: none;}
+        #vote2 form div {
+        	display: grid;
+        	grid-template-columns: repeat(5, auto);
+        	width: 90%;
+        	max-width: 1200px;
+        	margin: 0 auto;}
+                #vote2 form div div {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                	width: 100%;
+                        height: 100px;
+                	padding: 10px 20px;
+                	box-sizing: border-box;
+                	color: #FFF;
+                        background-color: #303030;
+                	background-color: rgba(48, 48, 48, 0.8);
+                        transition: all 0.2s;}
+                        #vote2 form div a:hover div {
+                                color: transparent;
+                                background: rgba(48, 48, 48, 0);
+                                transition: all 0.2s;}
+                #vote2 form div div::before {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-repeat: no-repeat;
+                        background-size: cover;}
+                        #vote2 form a[href="vote2.php?id=1"] div::before { background-image: url("images/miniatures/min_1.png");}
+                        #vote2 form a[href="vote2.php?id=2"] div::before { background-image: url("images/miniatures/min_2.png");}
+                        #vote2 form a[href="vote2.php?id=3"] div::before { background-image: url("images/miniatures/min_3.png");}
+                        #vote2 form a[href="vote2.php?id=4"] div::before { background-image: url("images/miniatures/min_4.png");}
+                        #vote2 form a[href="vote2.php?id=5"] div::before { background-image: url("images/miniatures/min_5.png");}
+                        #vote2 form a[href="vote2.php?id=6"] div::before { background-image: url("images/miniatures/min_6.png");}
+                        #vote2 form a[href="vote2.php?id=7"] div::before { background-image: url("images/miniatures/min_7.png");}
+                        #vote2 form a[href="vote2.php?id=8"] div::before { background-image: url("images/miniatures/min_8.png");}
+                        #vote2 form a[href="vote2.php?id=9"] div::before { background-image: url("images/miniatures/min_9.png");}
+                        #vote2 form a[href="vote2.php?id=9"] div::before { background-image: url("images/miniatures/min_9.png");}
+                        #vote2 form a[href="vote2.php?id=10"] div::before { background-image: url("images/miniatures/min_10.png");}
+                        #vote2 form a[href="vote2.php?id=11"] div::before { background-image: url("images/miniatures/min_11.png");}
+                        #vote2 form a[href="vote2.php?id=12"] div::before { background-image: url("images/miniatures/min_12.png");}
+                        #vote2 form a[href="vote2.php?id=13"] div::before { background-image: url("images/miniatures/min_13.png");}
+                        #vote2 form a[href="vote2.php?id=15"] div::before { background-image: url("images/miniatures/min_14.png");}
+                        #vote2 form a[href="vote2.php?id=15"] div::before { background-image: url("images/miniatures/min_15.png");}
+                        #vote2 form div span {margin: auto;}
+                                #vote2 form div span::before {content: "« "}
+                                #vote2 form div span::after {content: " »"}
+
 
 
 
@@ -984,6 +1098,11 @@ body#pages{border: 0;}
 /** ////////////////////////////////////////////////////////////////////////////////////////////
                                    RESPONSIVE
 //////////////////////////////////////////////////////////////////////////////////////////// **/
+
+@media (max-width: 1024px) {
+        #vote2 form div {
+        	grid-template-columns: repeat(3, auto);}
+}
 
 @media (max-width: 720px) {
         input.lien-tactile-inscription:checked ~ nav#menu {left: -260px;}
@@ -1050,10 +1169,16 @@ body#pages{border: 0;}
                 #pages #envoi .light:nth-of-type(3) {width: 100%; margin: 0 0 10px 0;}
                 #pages #envoi .light:nth-of-type(4) {flex: 1; width: 100%;  margin: 0 0 5px 0;}
                 #pages #envoi .light:nth-of-type(5) {flex: 1; margin-left: 0;}
+<<<<<<< HEAD
 
         #jury{flex-flow: column;}
         #jury>div{width: 100%;}
         .picture{max-width: 245px;margin: 0 auto;}
+=======
+        #vote2 form div {
+        	grid-template-columns: auto;}
+                #vote2 form div  div {height: 50px;}
+>>>>>>> 2e00a18bd3f7f6edfa5cb4c84ab432ce0c5fbf02
 }
 
 @media (max-width: 480px) {

@@ -44,16 +44,26 @@
                         <div>
                                 <img src="images/logo_blanc.png" id="logo" alt="logo">
                                 <div class="infos-header">
-                                        <div>
+                                        <!--div>
                                                 <span>Lundi 5 mars 2018 à 19h</span>
                                                 <span>Salle Jean Renoir</span>
                                                 <span>à Chambéry</span>
-                                        </div>
-                                        <!--a href="pages/vote.php"><div class="bouton-vote">
+                                        </div-->
+                                        <a href="pages/vote.php"><div class="bouton-vote">
                                                 <img src="images/icones/deadline.svg" width="auto">
                                                 <span>VOTEZ</span>
-                                        </div></a-->
+                                        </div></a>
+                                        <?php if(isset($_GET['ok'])){ echo
+                                                "<p>
+                                                Merci d'avoir voté, vous pouvez modifier votre vote en cliquant sur voter.
+                                                </p>";}
+                                        ?>
                                 </div>
+                                <?php if(isset($_GET['ok'])){ echo
+                                        "<p>
+                                        Merci d'avoir voté, vous pouvez modifier votre vote en cliquant sur voter.
+                                        </p>";}
+                                ?>
                         </div>
                         <video poster="videos/poster1.png" id="bgvideo" autoplay loop muted>
                                 <source src="videos/bgvideo.mp4" type="video/mp4">
@@ -62,6 +72,8 @@
 
                 <section id="description"> <!-- DESCRIPTION -->
                         <p>
+
+
                                 Le festival des FRAMMI Awards est un Festival de réalisations audiovisuelles étudiantes organisé par des étudiants du <a href="http://mmi.univ-savoie.fr/site/"><abbr title="Métiers du Multimédias et de l’Internet">DUT MMI</abbr></a> de Chambéry. Depuis la première édition en 2010, l’événement invite à découvrir des court-métrages réalisés par des étudiants. Notre objectif principal est de partager une passion commune autour d’un événement qui alliera professionnalisme et convivialité en regroupant des étudiants de différents horizons. <br>
 
                                 <br>Cette année la 9ème édition des FRAMMI Awards aura lieu le <span class="bold"><time datetime="2018-03-05T19:00">Lundi 5 mars 2018</time> salle Jean Renoir</span> à Chambéry. Les étudiants inscrits à cette évènement auront jusqu’au <time datetime="2018-03-05T19:00">Dimanche 18 février 2018</time> pour remettre leur courts métrages.
