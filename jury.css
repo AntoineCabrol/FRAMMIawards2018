@@ -1,6 +1,0 @@
-#presentation{display: flex;}
-	.picture{max-height: 250px;}
-	
-	.texte-presentation{border: 1px solid; width: 53.3%;}
-		.nom{text-align: center; padding-top: 10px;}
-		#jury-1, #jury-2, #jury-3{padding: 0px 10px;*}	
