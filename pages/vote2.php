@@ -1,4 +1,4 @@
-<!--?php
+<?php
 session_start();
 if(isset($_GET['id'])){
 $metAjour ="UPDATE frammi_vote SET choix_un ='".$_GET['id']."' WHERE id_votant ='".$_SESSION['id']."'";
@@ -12,9 +12,9 @@ mysql_select_db('marisfrp');
 mysql_query($metAjour) or die('Erreur SQL !<br />'.$metAjour.'<br />'.mysql_error());
 
 
-echo" Merci de votre vote, si vous desirez le changer merci de vous reconnecter";
+
 unset($_SESSION["id"]);
-exit();
+header('Location: ../index.php?ok=ok');
 
 }
 
@@ -39,7 +39,7 @@ exit(); }
 $_SESSION["id"]=$_POST['numero'];
 
 
-?-->
+?>
 
 
 
