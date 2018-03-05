@@ -781,7 +781,7 @@ a.localisation-bouton {color: #FFF;}
 
 #partenaires{
         grid-column: 2/3;
-        grid-row: 8;
+        grid-row: 8/9;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -807,7 +807,7 @@ a.localisation-bouton {color: #FFF;}
 
 footer#contact {
         grid-column: 1/4;
-        grid-row: 8/9;
+        grid-row: 9/10;
         color: #FFF;
         z-index: -1;
         position: relative;}
