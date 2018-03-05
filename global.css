@@ -716,14 +716,14 @@ img.idee+legend, img.clap+legend, img.fusee+legend, /**img.tapis+legend,**/ img.
 ***************************************/
 #jury{grid-column: 2/3;grid-row: 6/7;display: flex;justify-content: space-between;}
     .picture{width: 100%;}
-    
+
     .texte-presentation{width: 100%;text-align: center;}
         .nom{margin-top: 20px;}
         #jury-1, #jury-2, #jury-3{padding: 0px 10px;*}
     #jury > div {
     display: flex;
     flex-flow: column;
-    width: 30%;} 
+    width: 30%;}
 
 
 
@@ -1169,16 +1169,14 @@ body#pages{border: 0;}
                 #pages #envoi .light:nth-of-type(3) {width: 100%; margin: 0 0 10px 0;}
                 #pages #envoi .light:nth-of-type(4) {flex: 1; width: 100%;  margin: 0 0 5px 0;}
                 #pages #envoi .light:nth-of-type(5) {flex: 1; margin-left: 0;}
-<<<<<<< HEAD
 
         #jury{flex-flow: column;}
         #jury>div{width: 100%;}
         .picture{max-width: 245px;margin: 0 auto;}
-=======
+
         #vote2 form div {
         	grid-template-columns: auto;}
                 #vote2 form div  div {height: 50px;}
->>>>>>> 2e00a18bd3f7f6edfa5cb4c84ab432ce0c5fbf02
 }
 
 @media (max-width: 480px) {
