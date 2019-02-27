@@ -298,9 +298,9 @@ header > div:first-of-type {
         margin: auto;
         z-index: 1;}
         #logo {
-                max-width: 500px;
-        	margin: auto;
-                width: 100%;}
+          max-width: 500px;
+        	margin: auto;}
+          #logo img { width: 100%; }
         header .infos-header {
                 overflow: hidden;
                 height: 0;

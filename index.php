@@ -42,7 +42,9 @@
         <section id="grid-index">
                 <header> <!-- ENTETE -->
                         <div>
-                                <img src="images/logo_blanc.png" id="logo" alt="logo">
+                                <a id="logo" href="pingouin.html" target="_blank" alt="Easter egg !">
+                                  <img src="images/logo_blanc.png" alt="logo">
+                                </a>
                                 <div class="infos-header">
                                         <!--div>
                                                 <span>Lundi 5 mars 2018 à 19h</span>
@@ -135,19 +137,19 @@
                 <section id="jury">
                         <div id="premier">
                             <img src="images/jurys/jury-1.jpg" class="picture" width="auto" height="auto">
-                            
+
                             <!-- PREMIER JURY : texte -->
-                            <div class="texte-presentation"> 
-                                <div class="nom">JULIEN LAMY-QUIQUE</div> 
-                                    <div id="jury-1"> 
-                                         <p> Professeur de communication visuelle en PEC, sensibilisé sur l'art audiovisuelle grâce à ses différentes experiences dans le domaine.<br> Apportera un jugement professionel aux créations.</p>   
+                            <div class="texte-presentation">
+                                <div class="nom">JULIEN LAMY-QUIQUE</div>
+                                    <div id="jury-1">
+                                         <p> Professeur de communication visuelle en PEC, sensibilisé sur l'art audiovisuelle grâce à ses différentes experiences dans le domaine.<br> Apportera un jugement professionel aux créations.</p>
                                     </div>
                             </div>
                         </div>
 
                         <div id="deuxieme">
                             <img src="images/jurys/jury-2.jpg" class="picture" width="auto" height="auto">
-                            
+
                             <!-- DEUXIEME JURY : texte -->
                             <div class="texte-presentation">
                                 <div class="nom">CAROLINE MONTAUD</div>
@@ -159,7 +161,7 @@
 
                         <div id="troisieme">
                             <img src="images/jurys/jury-3.jpg" class="picture" width="auto" height="auto">
-                            
+
                             <!-- TROISIEME JURY : texte -->
                             <div class="texte-presentation">
                                 <div class="nom">JEAN-MARIE LAPERNAT</div>

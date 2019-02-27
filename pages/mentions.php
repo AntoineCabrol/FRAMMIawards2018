@@ -1,4 +1,4 @@
-<!doctype html> <!--veut dire que l'on est en html 5-->
+<!doctype html>
 <html lang="fr">
 	<head>
 		<?php include("../include/inc_meta.php") ?>
@@ -20,7 +20,7 @@
 			<p>
 				<a href="http://mmi.univ-savoie.fr/site/" target="_blank"><img src="../images/partenaires/logoMMI.png" height="60"/></a>
 				<a href="https://www.univ-smb.fr/" target="_blank"><img src="../images/partenaires/logoUSMB.png" height="60"/></a>
-				<a href="https://www.facebook.com/asso.dahiut" target="_blank"><img src="../images/partenaires/DAHIUT.jpg" height="60">
+				<a href="https://www.facebook.com/asso.dahiut" target="_blank"><img src="../images/partenaires/DAHIUT.jpg" height="60"></a>
 			</p>
 
 			<h2>Hébergement</h2>
@@ -31,7 +31,7 @@
 
 			<h2>Législation</h2>
 			<p>Conformément à la loi n°78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, vous disposez d'un droit d'accès aux informations vous concernant.</p>
-			<p><mailto>secretariat.src@univ-savoie.fr</mailto><br />
+			<p><a href="mailto:secretariat.src@univ-savoie.fr">secretariat.src@univ-savoie.fr</a><br />
 				Département MMI, IUT de CHAMBERY, Université de Savoie<br /></p>
 			<p>IUT de Chambéry<br />
 				Campus Scientifique - Savoie Technolac<br />
